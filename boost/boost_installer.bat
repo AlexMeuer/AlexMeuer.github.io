@@ -25,43 +25,37 @@ IF NOT EXIST bootstrap.bat GOTO noStrap
 cls
 call bootstrap
 cls
-title Done bootstrapping --- Ready to bjam!
-echo Bootstrapping done!
-echo.
-echo Ready to jam!
-echo.
+:ts_select
+title Toolset Select
 color e
-timeout 10
-cls
+echo.
+set TOOLSET_VER="msvc-14.0"
+set /p vs_ver=Do you want boost for VS2013 or VS2015? (13\15) ['?' for help] 
+if %vs_ver%==13 set TOOLSET_VER="msvc-12.0"
+if %vs_ver%==? goto tsHelp
+echo.
+echo Toolset set to: %TOOLSET_VER%
+timeout 5
 color a
-call .\b2
-cls
-title Boost Installer --- C00165681
-color c
-echo.
-echo.
-echo IMPORTANT!
-echo Setting Environment Variable BOOST_ROOT
-echo.
-echo Setting BOOST_ROOT to %CD%
-echo.
-timeout 10
-setx -m BOOST_ROOT %CD%
+call .\b2 toolset=%TOOLSET_VER%
 color e
-cls
 title Boost Installer --- C00165681 --- DONE!
-echo oooooooooo.                                   
-echo `888'   `Y8b                                  
-echo  888      888  .ooooo.  ooo. .oo.    .ooooo.  
-echo  888      888 d88' `88b `888P"Y88b  d88' `88b 
-echo  888      888 888   888  888   888  888ooo888 
-echo  888     d88' 888   888  888   888  888    .o 
-echo o888bood8P'   `Y8bod8P' o888o o888o `Y8bod8P'
 echo.
-echo. Written by Alexander Meuer (C00165681/NotOnFire)
-echo. Not0nFire.github.io
+echo Batch written by Alexander Meuer (C00165681/NotOnFire)
+echo Not0nFire.github.io
 timeout 60
 exit
+:tsHelp
+echo I'm asking you to pick a toolset version. You can change the toolset your using in the project settings in Visual Studio.
+echo.
+echo By default, VS2013 uses msvc-12.0 and VS2015 uses msvc-14.0
+echo.
+echo If you use both, just set the platform-toolset in your project to use version 12.
+echo.
+echo If you mix toolsets, you're gonna have a bad time, mmkay?
+echo.
+pause
+goto ts_select
 :noStrap
 cls
 color c
