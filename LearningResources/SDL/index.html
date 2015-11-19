@@ -1,0 +1,191 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SDL Texture Atlas (Json) [Learning Resource - C00165681]</title>
+	<script type="text/javascript" src="shCore.js"></script>
+	<script type="text/javascript" src="shBrushCpp.js"></script>
+	<link type="text/css" rel="Stylesheet" href="shCoreDefault.css"/>
+</head>
+
+<body style="background: white; font-family: Helvetica">
+<h1>Animating a sprite with a texture packer (SDL)</h1>
+<h2>C00165681 - Alexander Meuer</h2>
+		<p>
+			In this tutorial I will walk you through animating a sprite with a texture packer. Though this is a reasonably simple procedure, there are some prerequisites:</p>
+		<ul>
+			<li>
+				<a href="https://www.libsdl.org/">SDL</a> (if you don&#39;t know SDL, but want to, there are plenty of <a href="http://lazyfoo.net/SDL_tutorials/index.php">helpful tutorials here</a>)</li>
+			<li>
+				The <a href="https://www.libsdl.org/projects/SDL_image/">SDL image</a> library (<a href="https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-VC.zip">link</a>)</li>
+			<li>
+				<a href="https://github.com/open-source-parsers/jsoncpp">Jsoncpp </a>(to <a href="https://github.com/open-source-parsers/jsoncpp/blob/master/README.md">generate the source files</a> just run amalgamate.py from the repo, the files can then be found in the <em>dist </em>folder)</li>
+			<li>
+				A json file that points to the packed texture and defines the subtextures (I&#39;m using <a href="http://renderhjs.net/shoebox/">Shoebox </a>to pack the textures, which depends on <a href="https://get.adobe.com/air/">Adobe Air</a>. It spits out xml files but there are plenty of <a href="http://www.utilities-online.info/xmltojson/">online converter</a>s).</li>
+		</ul>
+		<p>
+			First off, you&#39;ll want to write your <em>main.cpp</em> and set up SDL in your application. If you&#39;re using Visual Studio like me, you&#39;ll need to open up your project properties, go to <em>VC++ Directories </em>and add the path to your sdl includes and libraries in the appropriate fields (detailed info on that <a href="http://lazyfoo.net/tutorials/SDL/01_hello_SDL/index.php">here</a>).</p>
+		<p>
+			Next step is to include SDL in your source file, like so:</p>
+		<pre class="brush: c;">#include &lt;SDL.h>
+#include &lt;SDL_image.h></pre>
+		<p>
+			And then write your main() and initialise SDL:</p>
+		<pre class="brush: c;">if (SDL_Init(SDL_INIT_VIDEO) &lt; 0)	{
+		std::cout &lt;&lt; "SDL could not initialize! SDL_Error: " &lt;&lt; SDL_GetError() &lt;&lt; std::endl;
+		system("timeout 10");	//wait 10 seconds
+		return EXIT_FAILURE;	//exit with an error code
+	}</pre>
+		<p>
+			Build and run your project. Make sure the compiler finds the SDL headers and that the linker finds the libraries. If you&#39;re having problems, Lazy Foo&#39; has <a href="http://lazyfoo.net/tutorials/SDL/index.php">in-depth tutorials </a>on getting SDL to behave nicely on your machine.)</p>
+		<p>
+			&nbsp;</p>
+		<p>
+			Moving forward, you&#39;ll want to declare an array of (pointers to)<em> SDL_Rect</em>s. These are your source rectangles for animation. We&#39;re going to load one texture and use multiple source rectangles to draw the desired part of it. You could write a sprite class to hold these but for the sake of this tutorial we&#39;re just going to do it in main(). If you don&#39;t know how many frames you&#39;ll have at compile time, consider using a vector instead of an array.</p>
+		<p>
+			As well as the array (or vector) you will also need a pointer to an SDL Texture. This will point to the packed texture, which we&#39;ll get to in a minute.</p>
+		<p>
+			Alrighty then, you&#39;ve got an array of <em>SDL_Rect</em> pointers and a pointer to an SDL Texture; Now you need to load up your json file: have no fear, it&#39;s simpler than it sounds! (but we will be writing a class for this part)</p>
+		<p>
+			The class shall be called <em>TextureAtlas</em>, and will serve as our texture atlas! It too needs a pointer to a texture. It also needs a map of strings to <em>SDL_Rect</em> pointers (this is so that we can request subtextures by their original names). You will need to include SDL and SDL_image in the this class, just as we did in main, but we will also need <em>&lt;fstream&gt;</em> (for reading the file) and <em>json/json.h</em> (for parsing the json, duh!).</p>
+		<p>
+			With a little foresight, we&#39;re also going to declare three methods in addition to the constructor and destructor, they are:</p>
+		<ul>
+			<li>
+				operator[], which takes a string and returns an SDL_Rect pointer. (It&#39;s also a public and const function.)</li>
+			<li>
+				getTexture(), which returns a pointer to the texture. (Is also both public and const.)</li>
+			<li>
+				loadTexture(), which takes a string and a pointer to an SDL_Renderer. We&#39;ll use this to load our texture and keep that code away from our json parsing code.</li>
+		</ul>
+		<p>
+			Note that the constructor takes a string (path the the json file) and a pointer to an SDL_Renderer (for texture loading). The class does NOT have a default constructor.</p>
+		<p>
+			With any luck you&#39;re header file for TextureAtlas will look something like this:</p>
+		<pre class="brush: c;">#ifndef _TEXTURE_ATLAS_H
+#define _TEXTURE_ATLAS_H
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;fstream>
+#include "json/json.h"
+
+class TextureAtlas {
+public:
+	TextureAtlas(const char* jsonPath, SDL_Renderer* renderer);
+	~TextureAtlas();
+
+	SDL_Rect* operator[](std::string const &key) const;	//get subtexture by name
+	SDL_Texture* getTexture() const;
+
+private:
+	std::map&lt;std::string, SDL_Rect*> mSubtextures;
+	SDL_Texture* mTexture;
+	SDL_Surface* mSurface;
+
+	void loadTexture(const char* path, SDL_Renderer* renderer);
+};
+#endif</pre>
+		<p>
+			&nbsp;</p>
+		<p>
+			Now it&#39;s time to dive into implementing this class. Go ahead and create your cpp file, we&#39;ll start with the constructor, which is going to be doing most of the work in the class.</p>
+		<p>
+			The first thing we need to do it open our json file (this is where the file stream comes into play):</p>
+		<pre class="brush: c;">std::ifstream fileStream = std::ifstream(jsonPath, std::ifstream::binary);</pre>
+		<p>
+			Next, we&#39;re going to need to get the root of our json file. Therfore, declare a Json::Value object and name it root. This object will correspond to the first curly brace of the file, and it&#39;s children will be everything before the closing brace.</p>
+		<pre class="brush: c;">Json::Value root;
+fileStream >> root;	//Read the file</pre>
+		<p>
+			Notice how we&#39;re using the bitshift operator to get the root from the filestream. We can now output this to the console with:</p>
+		<pre class="brush: c;">//Output the json file to console
+std::cout &lt;&lt; root.toStyledString() &lt;&lt; std::endl;</pre>
+		<p>
+			At this point, if you were to build and run your program, you would see your json file printed neatly inside the console (if it is indeed a valid json file and you created an instance of TextureAtlas inside main()).</p>
+		<p>
+			Now it&#39;s time to load the texture, so call <em>loadTexture </em>and pass <em>root[&quot;TextureAtlas&quot;][&quot;imagePath&quot;].asCString() </em>and the pointer to the renderer. <em>TextureAtlas</em> is a child of <em>root </em>(in the example json file) and <em>imagePath </em>is a child of <em>TextureAtlas</em>. Jsoncpp uses square brackets to access children, it&#39;s that easy. However, our <em>loadTexture </em>method doesn&#39;t take a <em>Json::Value</em> as an arguement, it takes a string, so we get the value of <em>imagePath </em>as a C string (if you&#39;re not using c-style strings in your code, you can use <em>.asString()</em> instead). <sup>(Don&#39;t worry about the implementation of <em>loadTexture</em>, we&#39;ll cover that soon.)</sup></p>
+		<p>
+			Time to parse our subtextures! Once again, declare a <em>Json::Value</em> object; call it <em>subtextures </em>or something else appropriate. Assign it to be like so:</p>
+		<pre class="brush: c;">//Find the array of subtextures.
+const Json::Value subtextures = root["TextureAtlas"]["SubTexture"];
+std::cout &lt;&lt; "Loading subtextures..." &lt;&lt; std::endl;</pre>
+		<p>
+			Instead of <em>imagePath </em>this time, we&#39;re looking for <em>SubTexture </em>(which is an array). We&#39;re going to need to iterate through the array of subtextures and, for each one, push an SDL_Rect (pointer) into our map, using the entries name as the key. The for-loop is similar to any other and can be declared like this: (note the use of <em>Json::Value::size()</em>)</p>
+		<pre class="brush: c;">for (int index = 0; index &lt; subtextures.size(); ++index)
+{</pre>
+		<p>
+			Because we&#39;re iterating though an array, we can now use the index of the for-loop to access each entry in the json file. Go ahead and declare a string for the name of the entry and and SDL_Rect pointer for the bounds.</p>
+	<pre class="brush: c;">	//get the name of the subtexture
+	std::string key = subtextures[index]["name"].asString();
+
+	//get the source rectangle of the subtexture
+	SDL_Rect* rect = new SDL_Rect();
+	rect->x = subtextures[index]["x"].asInt());
+	rect->y = subtextures[index]["y"].asInt());
+	rect->w = subtextures[index]["width"].asInt());
+	rect->h = subtextures[index]["height"].asInt());
+
+	printf("Subtexture: Name: %s\tX: %d\tY: %d\tW: %d\tH: %d\n", key.c_str(), rect->x, rect->y, rect->w, rect->h);
+
+	//add the name and rectangle to the map
+	mSubtextures[key] = rect;</pre>
+		<p>
+			Woah, let&#39;s just review those assignments for a sec. We get the current entry with <em>subtextures[index]</em> and append<em> [&quot;name&quot;].asString()</em> to get the name of the current entry from the file and parse it as a string. We then assign the x, y, width and height values in the same way, but with <em>.asInt()</em> instead of <em>.asString()</em>.</p>
+		<p>
+			<em><strong>But Alex, the example project&#39;s code is different! It has </strong></em><strong>atoi() </strong><em><strong>and </strong></em><strong>.asCString()</strong><em><strong>! What&#39;s going on???</strong></em></p>
+		<p>
+			<u>Don&#39;t panic!</u> The program I&#39;m using to pack my textures creates the json file with all values as strings. If you&#39;re json file has quotes around the numerical values, you&#39;ll have to do the same. What is <em>the same</em>, you ask? <em>atoi()</em> parses a c-style string to an integer, so I&#39;m getting each value as a c-style string and parsing it that way.</p>
+		<p>
+			<em><strong>Why didn&#39;t you take the quotes out for the tutorial then??</strong></em></p>
+		<p>
+			So that, if you&#39;re using Shoebox or a similar program, you can fix the problem now and not be trawling the internet for solutions. <em>*drops mic*</em></p>
+		<p>
+			&nbsp;</p>
+		<p>
+			Back to business: at the end of the loop, insert the rectangle into the map with the name as the key. Congratulations, you&#39;ve parsed a json file.</p>
+		<p>
+			Moving on: the loadTexture method is straightforward and pretty much the same wherever to find it / write it.</p>
+		<pre class="brush: c;">void TextureAtlas::loadTexture(const char* path, SDL_Renderer* renderer)
+{
+	mSurface = IMG_Load(path);
+
+	if (mSurface == nullptr)
+	{
+		printf("Unable to load image %s! SDL_image Error: %s\n", path, IMG_GetError());
+	}
+	else
+	{
+		//Create texture from surface pixels
+		mTexture = SDL_CreateTextureFromSurface(renderer, mSurface);
+		if (mTexture == nullptr)
+		{
+			printf("Unable to create texture from %s! SDL Error: %s\n", path, SDL_GetError());
+		}
+		else
+		{
+			printf("Loaded image %s successfully.\n", path);
+		}
+
+
+		//Get rid of old loaded surface
+		SDL_FreeSurface(mSurface);
+
+	}
+}</pre>
+		<p>
+			You could return the pointer to the texture, instead of setting the member variable. It&#39;s just an alternative.</p>
+		<p>
+			The operator[] and getTexture methods are even more straightforward, being just getters:</p>
+		<pre class="brush: c;">SDL_Rect* TextureAtlas::operator[](std::string const& key) const {
+	return mSubtextures.at(key);
+}
+
+SDL_Texture* TextureAtlas::getTexture() const {
+	return mTexture;
+}</pre>
+		<p>
+			Congratz again, you&#39;ve just completed the TextureAtlas class. With little work, this can be adapted/mutilated to work with <a href="http://www.sfml-dev.org/">SFML</a>(the successor to SDL) or any other media library for that matter. (Heck, with a wrapper class for texture, you can make it agnostic).</p>
+	</body>
+</html>
+
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</html>
