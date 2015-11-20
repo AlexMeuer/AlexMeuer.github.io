@@ -9,6 +9,7 @@
 <body style="background: white; font-family: Helvetica">
 <h1>Animating a sprite with a texture packer (SDL)</h1>
 <h2>C00165681 - Alexander Meuer</h2>
+<h3><a href="Example.zip">Example Source Code</a></h3>
 		<p>
 			In this tutorial I will walk you through animating a sprite with a texture packer. Though this is a reasonably simple procedure, there are some prerequisites:</p>
 		<ul>
@@ -32,7 +33,7 @@
 		<pre class="brush: c;">if (SDL_Init(SDL_INIT_VIDEO) &lt; 0)	{
 		std::cout &lt;&lt; "SDL could not initialize! SDL_Error: " &lt;&lt; SDL_GetError() &lt;&lt; std::endl;
 		system("timeout 10");	//wait 10 seconds
-		return EXIT_FAILURE;	//exit with an error code
+		return 1;	//exit with an error code
 	}</pre>
 		<p>
 			Build and run your project. Make sure the compiler finds the SDL headers and that the linker finds the libraries. If you&#39;re having problems, Lazy Foo&#39; has <a href="http://lazyfoo.net/tutorials/SDL/index.php">in-depth tutorials </a>on getting SDL to behave nicely on your machine.)</p>
@@ -73,7 +74,7 @@ public:
 	TextureAtlas(const char* jsonPath, SDL_Renderer* renderer);
 	~TextureAtlas();
 
-	SDL_Rect* operator[](std::string const &key) const;	//get subtexture by name
+	SDL_Rect* operator[](std::string const &amp;key) const;	//get subtexture by name
 	SDL_Texture* getTexture() const;
 
 private:
@@ -119,10 +120,10 @@ std::cout &lt;&lt; "Loading subtextures..." &lt;&lt; std::endl;</pre>
 
 	//get the source rectangle of the subtexture
 	SDL_Rect* rect = new SDL_Rect();
-	rect->x = subtextures[index]["x"].asInt());
-	rect->y = subtextures[index]["y"].asInt());
-	rect->w = subtextures[index]["width"].asInt());
-	rect->h = subtextures[index]["height"].asInt());
+	rect->x = subtextures[index]["x"].asInt();
+	rect->y = subtextures[index]["y"].asInt();
+	rect->w = subtextures[index]["width"].asInt();
+	rect->h = subtextures[index]["height"].asInt();
 
 	printf("Subtexture: Name: %s\tX: %d\tY: %d\tW: %d\tH: %d\n", key.c_str(), rect->x, rect->y, rect->w, rect->h);
 
@@ -175,7 +176,7 @@ std::cout &lt;&lt; "Loading subtextures..." &lt;&lt; std::endl;</pre>
 			You could return the pointer to the texture, instead of setting the member variable. It&#39;s just an alternative.</p>
 		<p>
 			The operator[] and getTexture methods are even more straightforward, being just getters:</p>
-		<pre class="brush: c;">SDL_Rect* TextureAtlas::operator[](std::string const& key) const {
+		<pre class="brush: c;">SDL_Rect* TextureAtlas::operator[](std::string const&amp; key) const {
 	return mSubtextures.at(key);
 }
 
@@ -184,6 +185,45 @@ SDL_Texture* TextureAtlas::getTexture() const {
 }</pre>
 		<p>
 			Congratz again, you&#39;ve just completed the TextureAtlas class. With little work, this can be adapted/mutilated to work with <a href="http://www.sfml-dev.org/">SFML</a>(the successor to SDL) or any other media library for that matter. (Heck, with a wrapper class for texture, you can make it agnostic).</p>
+	<p>
+			It&#39;s time to return to main.cpp and tie up the loose ends.</p>
+		<p>
+			Write a for-loop to populate the array of rectangles here with the corresponding ones form the atlas. In my example, my subtextures use the naming scheme (in the json file, and therefore in the atlas): <em>frame<strong>NUMBER</strong>.png</em> (&quot;frame1.png&quot;, &quot;frame2.png&quot;, ...). My loop looks like this:</p>
+		<pre class="brush: c;">for (int i = 0; i &lt; NUM_FRAMES; ++i)
+{
+	//Populate our frame array. If you're making a sprite class, put this in the contructor and pass in a reference to the atlas.
+	frames[i] = texAtlas[prefix + std::to_string(i) + postfix];
+}</pre>
+		<p>
+			If you&#39;ve rendered textures to the screen with SDL before (which I hope you have, because this tutorial assumes that knowledge), then you know you&#39;ll need to define a destination rectangle:</p>
+		<pre class="brush: c;">SDL_Rect dest;	//Where the texture will be drawn to on the screen
+dest.x = 100;
+dest.y = 100;
+dest.w = frames[0]->w;
+dest.h = frames[0]->h;</pre>
+		<p>
+			All that&#39;s left is to write a render loop and draw the current frame to the screen (incrementing the index each time).</p>
+		<pre class="brush: c;">SDL_SetRenderDrawColor(renderer, 255, 255, 255, 0);	//We'll be clearing the screen to black.
+while (true)
+{
+	//Cycle through frames
+	if (++currentFrame == NUM_FRAMES)
+	{
+		currentFrame = 0;
+	}
+
+	//Clear the screen
+	SDL_RenderClear(renderer);
+
+	SDL_RenderCopy(renderer, texture, frames[currentFrame], &dest); //Copy the image to the rendering object.
+
+	//Update the screen with rendering operations
+	SDL_RenderPresent(renderer);
+}</pre>
+		<h2>
+			<u>Voila. Animation with a texture packer.</u></h2>
+		<p>
+			If you want to continue on from this point, you can take the variables from main and create a Sprite class and/or Animation class. Give the</p>
 	</body>
 </html>
 
