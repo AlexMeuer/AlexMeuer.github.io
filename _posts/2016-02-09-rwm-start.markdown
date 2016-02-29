@@ -5,15 +5,20 @@ date:   2016-02-09 17:04:00 +0000
 categories: RealWorldModeling
 ---
 Just finished making a quick prototype for Project 3 of our Real World Modelling (RWM) subject. The goal of RWM is to teach us (the students) about agile development in a practical, sprint based scenario. Projects 0 through 2 were week long projects but this one lasts for four weeks and sees us pick up a new team member.
-![Prototype picture][prototype-pic]
 
 As part of the overall planning phase, each person has to create a prototype of a feature that answers a specific design question. The question my prototype answers is: "Does a match-3 minigame provide a fun and engaging way of creating units?".
 
 At first I was a little cynical: I didn't see how it could possibly answer yes to that question; however, with it completed, I actually think it could do quite well.
 
+![Prototype picture][prototype-pic]
+
+The player clicks on areas of 3 or more matching tiles. A circle is then spawned, its radius reflecting the size of the area, and it moves toward the centre. When it contacts another circle, they subtract from each others' radius (or health) until one is dead.
+
 ![Other prototype picture][other-prototype-pic]
+
+We've to discuss our prototypes tomorrow and look into how we might implement them in a way that doesn't feel like they've been tacked on but more like they form an integral part of the experience.
 
 Whether or not it makes it into the game will be decided on how it fares in playtesting tomorrow morning...
 
-[prototype-pic]: 
-[other-prototype-pic]: 
+[prototype-pic]: {{ mysite.url }}/assets/match_prototype_1.png
+[other-prototype-pic]: {{ mysite.url }}/assets/match_prototype_2.png
