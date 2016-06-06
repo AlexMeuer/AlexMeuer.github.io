@@ -2,10 +2,9 @@
 layout: post
 title:  "Sprint 3 is finally over!"
 date:   2016-02-04 15:33:00 +0000
-categories: FinalYearProject
+categories: projects
 ---
-<script type="text/javascript" src="{{ "/js/shBrushXml.js" | prepend: site.baseurl }}"></script>;
-Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
+<script type="text/javascript" src="{{ "/js/shBrushXml.js" | prepend: site.baseurl }}"></script>Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
 
 ![Main Menu Img][main-menu-png] | ![Level One Img][level-one-png]
 --- | ---
@@ -106,4 +105,3 @@ The third _layer_ comes into play in the Actor class. The _&lt;Actor&gt;_ xml ta
 
 [main-menu-png]: {{ mysite.url }}/assets/sprint3_menu.PNG
 [level-one-png]: {{ mysite.url }}/assets/sprint3_lvlOne.PNG
-
