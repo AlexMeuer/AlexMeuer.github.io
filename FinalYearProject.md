@@ -4,5 +4,5 @@ title: FinalYearProject
 permalink: /fyp_redirect/
 ---
 <script>
-window.location = "http://Not0nFire.github.io/FinalYearProject";
+window.location = "http://AlexMeuer.github.io/FinalYearProject";
 </script>
