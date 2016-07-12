@@ -7,7 +7,7 @@ excerpt_separator: <!-- excerpt -->
 ---
 <script type="text/javascript" src="{{ "/js/shBrushCpp.js" | prepend: site.baseurl }}"></script>This is a basic implementation of the ticket algorithm for multithreading in C++.<!-- excerpt --><br>
 I mean it when I say basic, I programmed this in a single lab for _Software Engineering for Games_. It had to satisfy a strict layout and rubric so it's not the nicest looking code but it shouldn't prove difficult to read or understand (it also may not be 100% perfect, but I got full marks for it).<br>
-The ticket algorithm aims to solve the problem of starvation: when one thread has to wait for ages before it is let aquire the mutex, while another thread (or multiple other threads) might be aquiring it over and over in the mean time. This can be detrimental to your program, you never want to starve out a thread. This algorithm works like a butcher shop or Argos: customers take a ticket and wait for their number to be called. This ensures that everyone gets served in the order they arrive (thus preventing any customer from being ignored in the corner).
+The ticket algorithm aims to solve the problem of starvation: when one thread has to wait for ages before it is let acquire the mutex, while another thread (or multiple other threads) might be acquiring it over and over in the mean time. This can be detrimental to your program, you never want to starve out a thread. This algorithm works like a butcher shop or Argos: customers take a ticket and wait for their number to be called. This ensures that everyone gets served in the order they arrive (thus preventing any customer from being ignored in the corner).
 <pre class="brush: c;">
 #include &lt;iostream>
 #include &lt;atomic>
