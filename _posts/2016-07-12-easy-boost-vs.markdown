@@ -103,4 +103,4 @@ pause
 
 [boost-dl]: http://www.boost.org/users/download/
 [gh-batch-checksums]: https://github.com/AlexMeuer/AlexMeuer.github.io/blob/master/assets/checksums
-[gh-batch-link]: https://github.com/AlexMeuer/AlexMeuer.github.io/blob/master/assets/boost_intaller.bat
+[gh-batch-link]: https://github.com/AlexMeuer/AlexMeuer.github.io/blob/master/assets/boost_installer.bat
