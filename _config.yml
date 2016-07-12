@@ -7,6 +7,16 @@
 
 #DO NOT USE TABS IN THIS FILE! Use spaces instead :)
 
+gems:
+  - jekyll-mentions
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-sitemap
+
+# defaults to Github, which is what I want
+#jekyll-mentions:
+#  base_url: https://twitter.com
+
 # Site settings
 title: Alexander Meuer
 email: alexmeuer@gmail.com
