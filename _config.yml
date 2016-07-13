@@ -25,7 +25,11 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://AlexMeuer.github.io" # the base hostname & protocol for your site
 github_username:  AlexMeuer
+linkedin_username: AlexMeuer
 timezone: Europe/Dublin
 
 # Build settings
 markdown: kramdown
+
+# Include _pages folder when building site
+include: [_pages]
