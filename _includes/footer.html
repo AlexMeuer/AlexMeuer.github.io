@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <!-- <h2 class="footer-heading">{{ site.title }}</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -23,6 +23,11 @@
           {% if site.linkedin_username %}
           <li>
             {% include icon-linkedin.html username=site.linkedin_username %}
+          </li>
+          {% endif %}
+          {% if site.discord_invite_link and site.discord_name %}
+          <li>
+            {% include icon-discord.html name=site.discord_name link=site.discord_invite_link %}
           </li>
           {% endif %}
         </ul>

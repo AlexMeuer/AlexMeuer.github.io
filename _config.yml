@@ -26,6 +26,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://AlexMeuer.github.io" # the base hostname & protocol for your site
 github_username:  AlexMeuer
 linkedin_username: AlexMeuer
+discord_name: Doraleous
+discord_invite_link: https://discord.gg/88n2Xsk
 timezone: Europe/Dublin
 
 # Build settings
