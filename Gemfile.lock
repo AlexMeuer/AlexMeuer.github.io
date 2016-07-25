@@ -125,7 +125,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-mentions
   jekyll-seo-tag
   jekyll-sitemap
   jemoji

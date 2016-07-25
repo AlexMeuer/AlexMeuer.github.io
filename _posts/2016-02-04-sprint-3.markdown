@@ -4,7 +4,7 @@ title:  "Sprint 3 is finally over!"
 date:   2016-02-04 15:33:00 +0000
 categories: projects
 ---
-<script type="text/javascript" src="{{ "/js/shBrushXml.js" | prepend: site.baseurl }}"></script>Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
+Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
 
 ![Main Menu Img][main-menu-png] | ![Level One Img][level-one-png]
 --- | ---
@@ -16,92 +16,92 @@ I have 3 _layers_ of xml loading in my game now. _Layers_ might not be a great w
 
 The UnitFactory is where the second _layer_ becomes involved. The type attribute of each _&lt;Unit&gt;_ denotes the file name for the unit definitions (minus the extension). The factory opens the corresponding file and passes the first xml element to the Minion or Hero constructor. Within the root element are is the _&lt;Pawn&gt;_ element, and inside that is the _&lt;Actor&gt;_ element, which in turn contains the _&lt;Collidable&gt;_ element. Each of these are passed to the corresponding constructor, which initialises its member variables and passes the base class tag to base constructor.
 
-<pre class="brush: xml">
+{% highlight xml %}
 <!-- filename: levelOne.lvl -->
-&lt;Level id="1"&gt;
-  &lt;Lives&gt;3&lt;/Lives&gt;
-	&lt;Background&gt;./res/img/bg.png&lt;/Background&gt;
-	&lt;TerrainData&gt;./res/img/terrain.bmp&lt;/TerrainData&gt;
-  &lt;Music volume="50"&gt;./res/mus/level.ogg&lt;/Music&gt;
-  &lt;StartingMoney&gt;300&lt;/StartingMoney&gt;
-  &lt;NextLevel&gt;LevelTwo&lt;/NextLevel&gt;
-  &lt;Path&gt;	<!-- nodes that enemies will follow through level -->
-		&lt;Node&gt;
-			&lt;X&gt;51&lt;/X&gt;
-			&lt;Y&gt;140&lt;/Y&gt;
-			&lt;Radius&gt;50&lt;/Radius&gt;
-		&lt;/Node&gt;
+<Level id="1"&gt;
+  <Lives&gt;3</Lives&gt;
+	<Background&gt;./res/img/bg.png</Background&gt;
+	<TerrainData&gt;./res/img/terrain.bmp</TerrainData&gt;
+  <Music volume="50"&gt;./res/mus/level.ogg</Music&gt;
+  <StartingMoney&gt;300</StartingMoney&gt;
+  <NextLevel&gt;LevelTwo</NextLevel&gt;
+  <Path&gt;	<!-- nodes that enemies will follow through level -->
+		<Node&gt;
+			<X&gt;51</X&gt;
+			<Y&gt;140</Y&gt;
+			<Radius&gt;50</Radius&gt;
+		</Node&gt;
          .
          .
          .
-    &lt;/Path&gt;
+    </Path&gt;
 
-    &lt;Units&gt;	<!-- every unit in the level, including PC -->
+    <Units&gt;	<!-- every unit in the level, including PC -->
         .
         .
         .
        <!-- type attribute gets picked up by UnitFactory -->
-        &lt;Unit type="basic_enemy"&gt;
-          &lt;X&gt;100&lt;/X&gt;
-          &lt;Y&gt;300&lt;/Y&gt;
-        &lt;/Unit&gt;
-        &lt;Unit type="fast_enemy"&gt;
-          &lt;X&gt;50&lt;/X&gt;
-          &lt;Y&gt;50&lt;/Y&gt;
-        &lt;/Unit&gt;
-	    &lt;Unit type="hero"&gt;
-          &lt;X&gt;500&lt;/X&gt;
-          &lt;Y&gt;400&lt;/Y&gt;
-	    &lt;/Unit&gt;
-    &lt;/Units&gt;
-</pre>
+        <Unit type="basic_enemy"&gt;
+          <X&gt;100</X&gt;
+          <Y&gt;300</Y&gt;
+        </Unit&gt;
+        <Unit type="fast_enemy"&gt;
+          <X&gt;50</X&gt;
+          <Y&gt;50</Y&gt;
+        </Unit&gt;
+	    <Unit type="hero"&gt;
+          <X&gt;500</X&gt;
+          <Y&gt;400</Y&gt;
+	    </Unit&gt;
+    </Units&gt;
+{% endhighlight %}
 
-The third _layer_ comes into play in the Actor class. The _&lt;Actor&gt;_ xml tag contains none or more _&lt;Animation&gt;_ tags. I have written a specialised template for my ResourceManager to work with thor::FrameAnimations, so the ResourceManager can load each unique animation once and each Actor can hold references to the ones it needs (inside its thor::Animator).
+The third _layer_ comes into play in the Actor class. The _<Actor&gt;_ xml tag contains none or more _<Animation&gt;_ tags. I have written a specialised template for my ResourceManager to work with thor::FrameAnimations, so the ResourceManager can load each unique animation once and each Actor can hold references to the ones it needs (inside its thor::Animator).
 
-<pre class="brush: xml">
+{% highlight xml %}
 <!-- filename: hero.def -->
-&lt;Hero name="hero"&gt;
-  &lt;HealthRegen rate="100"&gt;1&lt;/HealthRegen&gt;
-  &lt;Pawn&gt;
-    &lt;Faction&gt;PLAYER&lt;/Faction&gt;
-    &lt;Health&gt;100&lt;/Health&gt;
-    &lt;Armour&gt;0.50&lt;/Armour&gt;
-    &lt;MagicResist&gt;0.25&lt;/MagicResist&gt;
-    &lt;DamageType&gt;PHYSICAL&lt;/DamageType&gt;
-    &lt;AttackRange&gt;60&lt;/AttackRange&gt;
-    &lt;AttackDamage&gt;10&lt;/AttackDamage&gt;
-    &lt;AttacksPerSecond&gt;1.5&lt;/AttacksPerSecond&gt;
-    &lt;MovementSpeed&gt;150&lt;/MovementSpeed&gt;
+<Hero name="hero"&gt;
+  <HealthRegen rate="100"&gt;1</HealthRegen&gt;
+  <Pawn&gt;
+    <Faction&gt;PLAYER</Faction&gt;
+    <Health&gt;100</Health&gt;
+    <Armour&gt;0.50</Armour&gt;
+    <MagicResist&gt;0.25</MagicResist&gt;
+    <DamageType&gt;PHYSICAL</DamageType&gt;
+    <AttackRange&gt;60</AttackRange&gt;
+    <AttackDamage&gt;10</AttackDamage&gt;
+    <AttacksPerSecond&gt;1.5</AttacksPerSecond&gt;
+    <MovementSpeed&gt;150</MovementSpeed&gt;
 
 
-    &lt;Actor&gt;
-      &lt;!-- Texture path, this will be the texture's key in the ResourceManager --&gt;
-      &lt;Texture&gt;././res/img/hero.png&lt;/Texture&gt;
-      &lt;Animation path="././res/xml/hero_run.anim"&gt;
-        &lt;!-- Friendly name, local to each Actor --&gt;
-        &lt;Name&gt;walk&lt;/Name&gt;
-        &lt;!-- Duration of animation in seconds --&gt;
-        &lt;Duration&gt;0.6f&lt;/Duration&gt;
-      &lt;/Animation&gt;
+    <Actor&gt;
+      <!-- Texture path, this will be the texture's key in the ResourceManager --&gt;
+      <Texture&gt;././res/img/hero.png</Texture&gt;
+      <Animation path="././res/xml/hero_run.anim"&gt;
+        <!-- Friendly name, local to each Actor --&gt;
+        <Name&gt;walk</Name&gt;
+        <!-- Duration of animation in seconds --&gt;
+        <Duration&gt;0.6f</Duration&gt;
+      </Animation&gt;
       .
       .
       .
 
-      &lt;Origin x="25.f" y="50.f"/&gt;
+      <Origin x="25.f" y="50.f"/&gt;
 
-      &lt;!--
+      <!--
       Used to check for collisions.
       Options for type are "Circle" and "Convex";
       Circle requires a radius, whereas Convex requires the x, y and index of each point.
       --&gt;
-      &lt;Collidable pointCount="6" type="Circle"&gt;
-        &lt;Offset x="-2.5f" y="-5.f"/&gt;
-        &lt;Radius&gt;25.f&lt;/Radius&gt;
-      &lt;/Collidable&gt;
-    &lt;/Actor&gt;
-  &lt;/Pawn&gt;
-&lt;/Hero&gt;
-</pre>
+      <Collidable pointCount="6" type="Circle"&gt;
+        <Offset x="-2.5f" y="-5.f"/&gt;
+        <Radius&gt;25.f</Radius&gt;
+      </Collidable&gt;
+    </Actor&gt;
+  </Pawn&gt;
+</Hero&gt;
+{% endhighlight %}
 
 [main-menu-png]: {{ mysite.url }}/assets/sprint3_menu.PNG
 [level-one-png]: {{ mysite.url }}/assets/sprint3_lvlOne.PNG
