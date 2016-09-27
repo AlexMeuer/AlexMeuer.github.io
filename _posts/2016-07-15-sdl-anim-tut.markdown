@@ -31,7 +31,7 @@ if (SDL_Init(SDL_INIT_VIDEO)) < 0) {
   return 1; //exit with an error code
 }
 {% endhighlight %}  
-Build and run your project. Make sure the compiler finds the SDL headers and that the linker find the libraries. If you're having problems, LazyFoo' has [in-depth tutorials][lazyfoo] on getting SDL to behave nicely on your machine.)
+Build and run your project. Make sure the compiler finds the SDL headers and that the linker find the libraries. (If you're having problems, LazyFoo' has [in-depth tutorials][lazyfoo] on getting SDL to behave nicely on your machine.)
 
 Moving forward, you'll want to declare an array of (pointers to) `SDL_Rect`s. These are your source rectangles for animation. We're going to load one texture andnuse multiple source rectangles to draw the desired part of it. You could write a sprite class to hold these but for the sake of this tutorial we're just going to do it in `main()`. If you don't know how many frames you'll have at compile time, consider using a vector instead of an array.
 
@@ -49,7 +49,7 @@ With a little foresight, we're also going to declare three methods in addition t
 
  Note that the constructor takes a string (path to the json file) and a pointer to an `SDL_Renderer` (for texture loading). The class does NOT have a default constructor.
 
- With any look you're header file for `TextureAtlas` will look something like this:  
+ With any look your header file for `TextureAtlas` will look something like this:  
 {% highlight C++ %}
 #ifndef TEXTURE_ATLAS_H
 #define TEXTURE_ATLAS_H
@@ -113,19 +113,19 @@ for (int index = 0; index < subtextures.size(); ++index)
 Because we're iterating though an array, we can now use the index of the for-loop to access each entry in the json file. Go ahead and declare a string for the name of the entry and and `SDL_Rect` pointer for the bounds.  
 {% highlight C++ %}
 //get the name of the subtexture
-	std::string key = subtextures[index]["name"].asString();
+std::string key = subtextures[index]["name"].asString();
 
-	//get the source rectangle of the subtexture
-	SDL_Rect* rect = new SDL_Rect();
-	rect->x = subtextures[index]["x"].asInt();
-	rect->y = subtextures[index]["y"].asInt();
-	rect->w = subtextures[index]["width"].asInt();
-	rect->h = subtextures[index]["height"].asInt();
+//get the source rectangle of the subtexture
+SDL_Rect* rect = new SDL_Rect();
+rect->x = subtextures[index]["x"].asInt();
+rect->y = subtextures[index]["y"].asInt();
+rect->w = subtextures[index]["width"].asInt();
+rect->h = subtextures[index]["height"].asInt();
 
-	printf("Subtexture: Name: %s\tX: %d\tY: %d\tW: %d\tH: %d\n", key.c_str(), rect->x, rect->y, rect->w, rect->h);
+printf("Subtexture: Name: %s\tX: %d\tY: %d\tW: %d\tH: %d\n", key.c_str(), rect->x, rect->y, rect->w, rect->h);
 
-	//add the name and rectangle to the map
-	mSubtextures[key] = rect;
+//add the name and rectangle to the map
+mSubtextures[key] = rect;
 {% endhighlight %}
 Woah, let's just review those assignments for a sec. We get the current entry with `subtextures[index]` and append `["name"].asString()` to get the name of the current entry from the file and parse it as a string. We then assign the `x`, `y`, `width` and `height` values in the same way, but with `.asInt()` instead of `.asString()`.
 
@@ -183,7 +183,7 @@ Congratz again, you've just completed the `TextureAtlas` class. With little work
 
 It's time to return to `main.cpp` and tie up the loose ends.
 
-Write a for-loop to populate the array of rectangles here with the corresponding ones form the atlas. In my example, my subtextures use the naming scheme (in the json file, and therefore in the atlas): *frameNUMBER.png* ("frame1.png", "frame2.png", ...). My loop looks like this:  
+Write a for-loop to populate the array of rectangles here with the corresponding ones from the atlas. In my example, my subtextures use the naming scheme (in the json file, and therefore in the atlas): *frameNUMBER.png* ("frame1.png", "frame2.png", ...). My loop looks like this:  
 {% highlight C++ %}
 for (int i = 0; i < NUM_FRAMES; ++i)
 {

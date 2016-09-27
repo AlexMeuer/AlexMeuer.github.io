@@ -16,14 +16,13 @@ Follow these steps and you'll have boost in no time:
  - Run the script!  
  - Win!  
 
-Here's the [checksums][gh-batch-checksums] for `boost_intaller.bat`:  
+Here's the [checksums][gh-batch-checksums] for `boost_intaller.bat` for whoever wants 'em:  
 __md5:__ `3d6282fee61eabd3783caf2af5d3ec69`  
-__sha1:__ `964bde0c2e7c5f7d438094680c1da09ab8e9f87c`  
-If your batch file doesn't match these then __don't run it!__  
-The script is [hosted on Github][gh-batch-link] as part of this website, so if you feel the urge to contribute you can be my guest.
+__sha1:__ `964bde0c2e7c5f7d438094680c1da09ab8e9f87c`    
+The script is [hosted on Github][gh-batch-link] as part of this website, so if you feel the urge to <s>fix it</s> <s>make it better</s> contribute you can be my guest.
 
 Here's the contents of the batch file for your perusal:
-{% highlight %}
+{% highlight posh %}
 @echo off
 title Boost Installer --- C00165681 v1.0
 color a
