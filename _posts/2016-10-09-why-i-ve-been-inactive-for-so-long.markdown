@@ -20,5 +20,5 @@ I buried my dad that Friday. He's the greatest man I've ever known and the world
 
 ![My hero, mentor, friend.][dad]
 
-[leukemia]: #
+[leukemia]: https://en.wikipedia.org/wiki/Acute_lymphoblastic_leukemia
 [dad]: {{ mysite.url }}/assets/dad.jpg
