@@ -101,7 +101,9 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background-color: $background-color-footer;
 }
 
 .footer-heading {
