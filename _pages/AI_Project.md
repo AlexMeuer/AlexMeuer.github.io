@@ -3,7 +3,8 @@ layout: page
 title: Ai Project
 permalink: /ai_redirect/
 ---
-##The results are in!
+
+## The results are in!  
 ![91 out of 100][results]
 
 This page is currently just a stub, I've to flesh it out with actual content, but the good news is that it's no longer just a redirect script!
