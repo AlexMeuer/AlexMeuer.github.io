@@ -29,7 +29,17 @@ body {
     font-kerning: normal;
 }
 
+h1 {
+    color: $magenta;
+}
 
+h2 {
+    color: $red;
+}
+
+h3 {
+    color: $violet;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
