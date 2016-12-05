@@ -5,7 +5,7 @@ date:   2016-07-12 12:33:12 +0000
 catagories: programming
 excerpt_separator: <!-- excerpt -->
 ---
-<script type="text/javascript" src="{{ "/js/shBrushBash.js" | prepend: site.baseurl }}"></script>I wrote this ages ago when my fellow classmates were having trouble installing the Boost C++ library for college. It's just a little interactive batch script to make the process stress-free.<!-- excerpt -->
+I wrote this ages ago when my fellow classmates were having trouble installing the Boost C++ library for college. It's just a little interactive batch script to make the process stress-free.<!-- excerpt -->
 Currently I only have a script for Windows (Visual Studio) users but I may end up expanding it to cover other IDEs or (more likely) writing a bash script to cover Ubuntu (now my primary os).
 
 The majority of my classmates had both VS2013 and VS2015 installed, so the script holds the user's hand through picking a toolset (Boost install will default to VS2015 toolset which means that trying to use it with VS2013 causes headaches). Apart from that, all it really does is run the two boost install scripts in the right order.
@@ -16,14 +16,13 @@ Follow these steps and you'll have boost in no time:
  - Run the script!  
  - Win!  
 
-Here's the [checksums][gh-batch-checksums] for `boost_intaller.bat`:  
+Here's the [checksums][gh-batch-checksums] for `boost_intaller.bat` for whoever wants 'em:  
 __md5:__ `3d6282fee61eabd3783caf2af5d3ec69`  
-__sha1:__ `964bde0c2e7c5f7d438094680c1da09ab8e9f87c`  
-If your batch file doesn't match these then __don't run it!__  
-The script is [hosted on Github][gh-batch-link] as part of this website, so if you feel the urge to contribute you can be my guest.
+__sha1:__ `964bde0c2e7c5f7d438094680c1da09ab8e9f87c`    
+The script is [hosted on Github][gh-batch-link] as part of this website, so if you feel the urge to <s>fix it</s> <s>make it better</s> contribute you can be my guest.
 
 Here's the contents of the batch file for your perusal:
-<pre class="brush: bash">
+{% highlight posh %}
 @echo off
 title Boost Installer --- C00165681 v1.0
 color a
@@ -99,7 +98,7 @@ echo Are you sure this file is in the right place?
 echo Current directory: %CD%
 echo.
 pause
-</pre>
+{% endhighlight %}
 
 [boost-dl]: http://www.boost.org/users/download/
 [gh-batch-checksums]: https://github.com/AlexMeuer/AlexMeuer.github.io/blob/master/assets/checksums

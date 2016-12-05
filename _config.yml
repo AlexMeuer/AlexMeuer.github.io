@@ -8,7 +8,6 @@
 #DO NOT USE TABS IN THIS FILE! Use spaces instead :)
 
 gems:
-  - jekyll-mentions
   - jekyll-seo-tag
   - jemoji
   - jekyll-sitemap

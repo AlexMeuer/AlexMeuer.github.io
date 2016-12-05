@@ -4,12 +4,21 @@ title: Ai Project
 permalink: /ArnieBoids/
 doxylink: http://shovelware.github.io/arnieboids
 ---
+<<<<<<< HEAD
 #The results are in!:rocket:  
+=======
+
+## The results are in!  
+>>>>>>> master
 ![91 out of 100][results]
 
 >Allow me to break the ice...
 
+<<<<<<< HEAD
 In my final year of college we had to do a two-man project ([Davy Whelan][shovel-gh] and myself) for our _Artificial Intelligence for Games_ module. The resulting game had to be an asteroids clone with a focus on artificial intelligence. There was a bunch of stuff on the brief, which can be found on the [doxygen site][doxygen] for the project, but here I'll just go over the interesting parts. (All the sound effects were Arnold move quotes, so forgive the references!)
+=======
+That's right, you now have a choice of whether or not to follow the [link to the doxygen site][doxygen].
+>>>>>>> master
 
 ##Planning
 Apart from making a fantastic team, a large part of why we scored so highly in this assignment was that we nailed down the architecture from day one and stuck to it. We hashed out our class diagram and domain model and they barely changed, if at all, over the course of the project. We were very confident going into this that we knew how to construct a game like this with SFML, the only challenge was the AI (which, being an AI assignment, was exactly the way it should've been).

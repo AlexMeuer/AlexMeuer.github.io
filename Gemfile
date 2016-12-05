@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 gem 'github-pages'
-gem 'jekyll-mentions'
 gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
 gem 'jemoji'
