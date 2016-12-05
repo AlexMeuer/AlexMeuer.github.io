@@ -4,7 +4,7 @@ title: "Why I've been inactive for so long :hourglass:"
 date: "2016-10-09 16:38"
 excerpt_separator: <!-- excerpt -->
 ---
-I figured I'd just post a quick update in case anyone's reading through this and wonder's why there's a huge gap in my posts.<!-- excerpt -->
+I figured I'd just post a quick update in case anyone's reading through this and wonders why there's a huge gap in my posts.<!-- excerpt -->
 
 My father fought cancer for the last eight years ([_acute lymphoblastic leukemia_][leukemia]). I was 14 when he was diagnosed and my sister was 12. He was told over and over that he had _X_ months to live but he never let it get to him. He was constantly optimistic, even in the face of death. A few years into treatment and the doctor's basically told him "We actually don't know how you've survived this". He said he was surviving for his kids and by the grace of God.
 
