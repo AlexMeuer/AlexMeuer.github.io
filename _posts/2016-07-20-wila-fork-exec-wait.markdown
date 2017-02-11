@@ -2,6 +2,7 @@
 layout: post
 title:  "What I learned about: fork(), exec(), wait()"
 date:   2016-07-20 14:34:20 +0000
+published: false
 excerpt_separator: <!-- excerpt -->
 ---
 I've been coding some pretty nifty stuff at work and one of the newest things I've learned is [fork()][man-fork], [exec()][man-exec] and [wait()][man-wait].<!-- excerpt --> These are linux-specific C functions centered around creating and working with multiple processes. I'll give a super quick overview and what each on does, in case it's not totally obvious:
