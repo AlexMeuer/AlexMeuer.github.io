@@ -12,10 +12,6 @@ gems:
   - jemoji
   - jekyll-sitemap
 
-# defaults to Github, which is what I want
-#jekyll-mentions:
-#  base_url: https://twitter.com
-
 # Site settings
 title: Alexander Meuer
 email: alexmeuer@gmail.com
@@ -26,7 +22,7 @@ url: "http://AlexMeuer.github.io" # the base hostname & protocol for your site
 github_username:  AlexMeuer
 linkedin_username: AlexMeuer
 discord_name: Doraleous
-discord_invite_link: https://discord.gg/88n2Xsk
+discord_invite_link: https://discord.gg/zq7kDGW
 timezone: Europe/Dublin
 
 # Build settings
