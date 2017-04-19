@@ -14,8 +14,9 @@ Anyways, I figured posting about it here will help me keep myself accountable.
 
 When we have something real to show, I'll post it here. Until then: [**Watch this space!** :microscope:][rss]
 
-:octopus: Oh, and why did we call it CuriousSquid? *Larry the Curious Squid* was the working title I used for my college projects. It was a name I picked out of thick air and it was vague enough to fit pretty much any brief we were given!
+:octopus: Oh, and why did we call it CuriousSquid? *[Larry the Curious Squid][larry]* was the working title I used for my college projects. It was a name I picked out of thick air and it was vague enough to fit pretty much any brief we were given!
 
 [org-page]: https://github.com/CuriousSquid
 [joshmoo]: https://joshmooney.github.io/Polysite/
+[larry]: https://github.com/AlexMeuer/Larry-the-Curious-Squid
 [rss]: {{ site.baseUrl }}/feed.xml
