@@ -3,6 +3,7 @@ layout: "post"
 title: "CuriousSquid is a go!"
 date: "2017-04-18 21:52"
 excerpt_separator: <!-- excerpt -->
+published: false
 ---
 It's been almost a year since I finished college and I'm now beginning to develop seriously in my spare time!<!-- excerpt -->
 
