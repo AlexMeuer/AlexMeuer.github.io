@@ -79,7 +79,7 @@
      id="layer4"
      inkscape:label="Background">
     <ellipse
-       style="opacity:1;fill:#5f70be;fill-opacity:1;stroke:url(#linearGradient5277);stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#586e75;fill-opacity:1;stroke:url(#linearGradient5277);stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5269"
        cx="200.00482"
        cy="199.99948"
@@ -103,7 +103,7 @@
      id="layer5"
      inkscape:label="Eyes">
     <ellipse
-       style="display:inline;opacity:1;fill:#5f70be;fill-opacity:1;stroke:#ffffff;stroke-width:1.19828224"
+       style="display:inline;opacity:1;fill:#586e75;fill-opacity:1;stroke:#ffffff;stroke-width:1.19828224"
        id="path4183"
        cx="150.89117"
        cy="214.96248"
@@ -115,6 +115,6 @@
        cy="214.96248"
        cx="244.02232"
        id="ellipse4185"
-       style="display:inline;opacity:1;fill:#5f70be;fill-opacity:1;stroke:#ffffff;stroke-width:1.19828224" />
+       style="display:inline;opacity:1;fill:#586e75;fill-opacity:1;stroke:#ffffff;stroke-width:1.19828224" />
   </g>
 </svg>

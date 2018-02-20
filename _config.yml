@@ -11,6 +11,8 @@ gems:
   - jekyll-seo-tag
   - jemoji
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-github-metadata
 
 # Site settings
 title: Alexander Meuer
@@ -23,6 +25,8 @@ github_username:  AlexMeuer
 linkedin_username: AlexMeuer
 discord_name: Doraleous
 discord_invite_link: https://discord.gg/zq7kDGW
+so_username: alex-meuer
+so_id: 4571656
 timezone: Europe/Dublin
 
 # Build settings
