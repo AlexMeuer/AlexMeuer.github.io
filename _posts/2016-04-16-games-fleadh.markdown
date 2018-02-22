@@ -23,5 +23,5 @@ I would have liked to compete properly in fourth year (this year), entering eith
 ![Games Fleadh 2016][fleadh-2016]
 John Romero was guest speaker at the Games Fleadh this year and also one of the judges. He discussed his background and drip-fed us all useful tidbits about development. He began coding super young, sneaking into his local college to programme on their mainframe. At age sixteen he was programming for the US airforce! He stressed some basic principles which a lot of us young buding developers seems to overlook; things like __Code for the current project, not future projects__. I see a few too many of my peers attempting to program game engines despite not yet having graduated, or writing a really nice flexible system for something that they're only going to replace a few months down the line. _Code for the current project_: by the time the next project comes around, you;ll have learned more, be able to code better and that nice flexible system just won't have aged as well as you thought it would. I know I'm not some super experienced dev but even through my time in college I've seen this ring true so many times. It's the main piece of advice I took from his talk, __heed it__.
 
-[fleadh-2014]: {{ mysite.url }}/assets/games-fleadh-2014.jpg
-[fleadh-2016]: {{ mysite.url }}/assets/games-fleadh-2016.jpg
+[fleadh-2014]: {{ mysite.url }}/postAssets/games-fleadh-2014.jpg
+[fleadh-2016]: {{ mysite.url }}/postAssets/games-fleadh-2016.jpg

@@ -9,4 +9,4 @@ All the work has finally paid off and I now have the highest award possible from
 Without further waffle, here's the screenshot of my result:<br>
 ![First Class Honours!][fch]
 
-[fch]: {{ mysite.url }}/assets/first-class-honours.jpg
+[fch]: {{ mysite.url }}/postAssets/first-class-honours.jpg

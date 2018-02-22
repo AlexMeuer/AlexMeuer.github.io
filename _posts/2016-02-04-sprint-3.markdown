@@ -103,5 +103,5 @@ The third _layer_ comes into play in the Actor class. The _<Actor&gt;_ xml tag c
 </Hero&gt;
 {% endhighlight %}
 
-[main-menu-png]: {{ mysite.url }}/assets/sprint3_menu.PNG
-[level-one-png]: {{ mysite.url }}/assets/sprint3_lvlOne.PNG
+[main-menu-png]: {{ mysite.url }}/postAssets/sprint3_menu.PNG
+[level-one-png]: {{ mysite.url }}/postAssets/sprint3_lvlOne.PNG

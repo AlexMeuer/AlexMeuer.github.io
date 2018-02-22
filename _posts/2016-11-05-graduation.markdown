@@ -16,6 +16,6 @@ I'm glad I got the colour right! :wink:
 
 I have some better photos somewhere; When I find them, I'll stick 'em up.
 
-[profiler-pic]: {{ mysite.url }}/assets/grad/profiler.jpg
-[degree-pic]: {{ mysite.url }}/assets/grad/degree_get.jpg
-[group-pic]: {{ mysite.url }}/assets/grad/da_boiz.jpg
+[profiler-pic]: {{ mysite.url }}/postAssets/grad/profiler.jpg
+[degree-pic]: {{ mysite.url }}/postAssets/grad/degree_get.jpg
+[group-pic]: {{ mysite.url }}/postAssets/grad/da_boiz.jpg

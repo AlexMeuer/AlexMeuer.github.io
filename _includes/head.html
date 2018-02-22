@@ -7,9 +7,26 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <!--<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.6.5, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{{ "assets/images/logo2.png" | prepend: site.url }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ "assets/web/assets/mobirise-icons/mobirise-icons.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/tether/tether.min.cs" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/bootstrap/css/bootstrap.min.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/bootstrap/css/bootstrap-grid.min.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/bootstrap/css/bootstrap-reboot.min.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/dropdown/css/style.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/socicon/css/styles.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/animatecss/animate.min.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/theme/css/style.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "assets/mobirise/css/mbr-additional.css" | prepend: site.url }}" type="text/css">
+
 
 {% seo %}
 </head>

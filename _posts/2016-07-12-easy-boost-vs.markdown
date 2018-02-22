@@ -12,7 +12,7 @@ The majority of my classmates had both VS2013 and VS2015 installed, so the scrip
 
 Follow these steps and you'll have boost in no time:  
  - [Download Boost][boost-dl] and extract it to wherever you want.  
- - Drop <a href="{{ mysite.url }}/assets/boost_installer.bat" download>boost_installer.bat</a> into the Boost folder.  
+ - Drop <a href="{{ mysite.url }}/postAssets/boost_installer.bat" download>boost_installer.bat</a> into the Boost folder.  
  - Run the script!  
  - Win!  
 

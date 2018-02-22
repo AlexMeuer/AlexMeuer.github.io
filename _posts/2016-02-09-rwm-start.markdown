@@ -21,5 +21,5 @@ We've to discuss our prototypes tomorrow and look into how we might implement th
 
 Whether or not it makes it into the game will be decided on how it fares in playtesting tomorrow morning...
 
-[prototype-pic]: {{ mysite.url }}/assets/match_prototype_1.png
-[other-prototype-pic]: {{ mysite.url }}/assets/match_prototype_2.png
+[prototype-pic]: {{ mysite.url }}/postAssets/match_prototype_1.png
+[other-prototype-pic]: {{ mysite.url }}/postAssets/match_prototype_2.png

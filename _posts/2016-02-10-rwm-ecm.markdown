@@ -27,5 +27,5 @@ That's all there is to it. It's a fairly simple pattern once you get your head a
 I'm no expert on this topic, so should another article contradict anything here, it'd probably be best to follow the other article. Nevertheless, I hope this becomes of use to someone.
 
 
-[move-sys-call-graph]: {{ mysite.url }}/assets/move_call_graph.png
-[component-inheritance-graph]: {{ mysite.url }}/assets/component_inheritance_graph.png
+[move-sys-call-graph]: {{ mysite.url }}/postAssets/move_call_graph.png
+[component-inheritance-graph]: {{ mysite.url }}/postAssets/component_inheritance_graph.png
