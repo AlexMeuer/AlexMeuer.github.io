@@ -30,6 +30,7 @@ discord_invite_link: https://discord.gg/zq7kDGW
 so_username: alex-meuer
 so_id: 4571656
 timezone: Europe/Dublin
+highlighter: rouge
 
 sass:
     sass_dir: assets
@@ -53,3 +54,5 @@ defaults:
       type: "posts"
     values:
       image: "default.jpg"
+      extra-css:
+        - "assets/pygments/monokai.css"

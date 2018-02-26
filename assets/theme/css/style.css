@@ -24,9 +24,6 @@ a {
   a, a:hover {
     text-decoration: none; }
 
-figure {
-  margin-bottom: 0; }
-
 body {
   color: #232323; }
 
@@ -174,8 +171,6 @@ section {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; } }
-figure {
-  overflow: hidden; }
 
 figure[mbr-media-size] {
   transition: width 0.1s; }
@@ -415,7 +410,14 @@ nav .mbr-section-btn {
   .menu .navbar-toggleable-sm .navbar-collapse {
     display: -webkit-flex !important; } }
 
+.post-content {
+  text-align: justify;
+  text-justify: inter-word'
+}
 .post-content img {
   max-width: 100%;
   vertical-align: middle;
+}
+.post-content .highlight {
+  text-align: left;
 }
