@@ -3,24 +3,24 @@
         <div class="media-container-row align-center mbr-white">
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
-                    <div class="soc-item">
-                        <a href="https://github.com/AlexMeuer" target="_blank">
+                    <div class="soc-item" title="GitHub: {{ site.github_username }}">
+                        <a href="https://github.com/{{ site.github_username}}" target="_blank" rel="noopener">
                           <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
                       </a>
                     </div>
-                    <div class="soc-item">
-                        <a href="https://ie.linkedin.com/in/AlexMeuer" target="_blank">
+                    <div class="soc-item" title="LinkedIn: {{ site.linkedin_username }}">
+                        <a href="https://ie.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">
                           <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
                       </a>
                     </div>
-                    <div class="soc-item">
-                        <a href="http://stackoverflow.com/users/4571656/alex-meuer" target="_blank">
+                    <div class="soc-item" title="StackOverflow: {{ site.so_username }}">
+                        <a href="http://stackoverflow.com/users/{{ site.so_id}}/{{ site.so_username}}" target="_blank" rel="noopener" rel="noopener">
                           <span class="mbr-iconfont mbr-iconfont-social socicon-stackoverflow socicon"></span>
                       </a>
                     </div>
-                    <div class="soc-item">
-                        <a href="https://discord.gg/zq7kDGW" target="_blank">
-                          <span class="mbr-iconfont mbr-iconfont-social socicon-grooveshark socicon"></span>
+                    <div class="soc-item" title="Discord: {{ site.discord_name }}">
+                        <a href="{{ site.discord_invite_link }}" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-discord socicon"></span>
                       </a>
                     </div>
                 </div>
@@ -34,7 +34,6 @@
     </div>
 </section>
 
-
 <script src="{{ "assets/web/assets/jquery/jquery.min.js" | prepend: site.url }}"></script>
 <script src="{{ "assets/popper/popper.min.js" | prepend: site.url }}"></script>
 <script src="{{ "assets/tether/tether.min.js" | prepend: site.url }}"></script>
@@ -42,11 +41,14 @@
 <script src="{{ "assets/smoothscroll/smooth-scroll.js" | prepend: site.url }}"></script>
 <script src="{{ "assets/dropdown/js/script.min.js" | prepend: site.url }}"></script>
 <script src="{{ "assets/viewportchecker/jquery.viewportchecker.js" | prepend: site.url }}"></script>
-<script src="{{ "assets/parallax/jarallax.min.js" | prepend: site.url }}"></script>
-<script src="{{ "assets/mbr-tabs/mbr-tabs.js" | prepend: site.url }}"></script>
 <script src="{{ "assets/touchswipe/jquery.touch-swipe.min.js" | prepend: site.url }}"></script>
+<script src="{{ "assets/parallax/jarallax.min.js" | prepend: site.url }}"></script>
+{% if page.extra-scripts %}
+  {% for script in page.extra-scripts %}
+<script src="{{ script | prepend: site.url }}"></script>
+  {% endfor %}
+{% endif %}
 <script src="{{ "assets/theme/js/script.js" | prepend: site.url }}"></script>
-
 
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
 <input name="animation" type="hidden">

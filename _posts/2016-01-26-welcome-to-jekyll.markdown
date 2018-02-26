@@ -2,6 +2,7 @@
 layout: post
 title:  "First Jekyll post!"
 date:   2016-01-26 12:24:48 +0000
+tags: ""
 excerpt_separator: <!-- excerpt -->
 ---
 <!-- excerpt -->

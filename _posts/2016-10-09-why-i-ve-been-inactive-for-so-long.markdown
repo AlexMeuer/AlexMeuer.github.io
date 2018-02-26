@@ -2,6 +2,7 @@
 layout: "post"
 title: "Why I've been inactive for so long :hourglass:"
 date: "2016-10-09 16:38"
+tags: "Personal"
 excerpt_separator: <!-- excerpt -->
 ---
 I figured I'd just post a quick update in case anyone's reading through this and wonders why there's a huge gap in my posts.<!-- excerpt -->

@@ -2,7 +2,7 @@
 layout: post
 title:  "Easy Boost install for Visual Studio"
 date:   2016-07-12 12:33:12 +0000
-catagories: programming
+tags: "Tutorial"
 excerpt_separator: <!-- excerpt -->
 ---
 I wrote this ages ago when my fellow classmates were having trouble installing the Boost C++ library for college. It's just a little interactive batch script to make the process stress-free.<!-- excerpt -->

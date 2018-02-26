@@ -2,6 +2,7 @@
 layout: post
 title:  "I graduated!"
 date:   2016-11-06 00:00:00 +0000
+tags: "Personal"
 excerpt_separator: <!-- excerpt -->
 ---
 :mortar_board: I attended my graduation ceremony yesterday and now have a fancy piece of paper to prove my Bachelor of Science (First Class Honours) in Computer Games Development!<!-- excerpt -->

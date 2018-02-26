@@ -415,6 +415,7 @@ nav .mbr-section-btn {
   .menu .navbar-toggleable-sm .navbar-collapse {
     display: -webkit-flex !important; } }
 
-.post-content {
-  padding: 70px
+.post-content img {
+  max-width: 100%;
+  vertical-align: middle;
 }

@@ -2,6 +2,7 @@
 layout: post
 title:  "SDL Texture Packer Animation Tutorial"
 date:   2016-07-12 12:56:04 +0000
+tags: "Tutorial C++"
 excerpt_separator: <!-- excerpt -->
 ---
 In this tutorial I will walk you through animating a sprite with a texture packer.<!-- excerpt -->

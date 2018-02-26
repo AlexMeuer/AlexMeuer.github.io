@@ -2,7 +2,7 @@
 layout: post
 title:  "Sprint 3 is finally over!"
 date:   2016-02-04 15:33:00 +0000
-categories: projects
+tags: "Projects"
 ---
 Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
 

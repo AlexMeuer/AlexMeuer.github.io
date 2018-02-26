@@ -1,0 +1,47 @@
+---
+extra-css:
+  - "assets/gallery/style.css"
+extra-scripts:
+  - "assets/masonry/masonry.pkgd.min.js"
+  - "assets/imagesloaded/imagesloaded.pkgd.min.js"
+  - "assets/gallery/script.js"
+---
+{% comment %}
+
+    TODO: RSS link
+
+{% endcomment %}
+<section class="mbr-gallery cid-qKiZwBfQoP">
+  <div class="container">
+    <div>
+      <!-- Filter -->
+      <div class="mbr-gallery-filter container gallery-filter-active">
+        <ul buttons="0">
+          <li class="mbr-gallery-filter-all">
+            <a class="btn btn-md btn-primary-outline active display-7" href="">All</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Gallery -->
+      <div class="mbr-gallery-row">
+        <div class="mbr-gallery-layout-default">
+          <div>
+            <div>
+              {% for post in site.posts %}
+              <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="{{ post.tags | join: ', ' }}">
+                <div onclick="window.location='{{ post.url }}';">
+                  <img src="{{ site.header_image_dir | prepend: site.url | append: post.image }}" alt="">
+                  <span class="icon-focus"></span>
+                  <span class="mbr-gallery-title mbr-fonts-style display-7">{{ post.title }}</span>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="clearfix">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

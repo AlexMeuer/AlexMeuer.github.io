@@ -2,7 +2,6 @@
 layout: "post"
 title: "Games Fleadh"
 date: "2016-04-16 15:52"
-categories: prog
 ---
 __tl;dr__ John Romero is a super inspirational dev and makes me wish I starting coding earlier. Also, ITC rakes in the awards.
 
