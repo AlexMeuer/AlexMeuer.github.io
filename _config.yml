@@ -33,7 +33,7 @@ timezone: Europe/Dublin
 highlighter: rouge
 
 sass:
-    sass_dir: assets
+    sass_dir: .
     style: compressed
 
 # Build settings
@@ -46,6 +46,10 @@ include: [_pages]
 defaults:
   - scope:
       path: ""
+    values:
+      animateEverything: no
+  - scope:
+      path: ""
       type: "pages"
     values:
       layout: "default"
@@ -54,5 +58,6 @@ defaults:
       type: "posts"
     values:
       image: "default.jpg"
+      excerpt_separator: <!-- excerpt -->
       extra-css:
         - "assets/pygments/monokai.css"

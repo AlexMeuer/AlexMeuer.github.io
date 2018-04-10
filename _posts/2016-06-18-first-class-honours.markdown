@@ -2,7 +2,7 @@
 layout: "post"
 title: "First Class Honours"
 date: "2016-06-18 08:04"
-excerpt_separator: <!-- excerpt -->
+image: "award.jpg"
 tags: "Personal"
 ---
 College results were released this week and I must say that I am ecstatic with mine.<!-- excerpt -->

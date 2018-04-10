@@ -30,7 +30,11 @@ extra-scripts:
               {% for post in site.posts %}
               <div class="mbr-gallery-item mbr-gallery-item--p1" data-tags="{{ post.tags | join: ', ' }}">
                 <div onclick="window.location='{{ post.url }}';">
+                  {% unless post.image contains 'http' %}
                   <img src="{{ site.header_image_dir | prepend: site.url | append: post.image }}" alt="">
+                  {% else %}
+                  <img src="{{ post.image }}" alt="">
+                  {% endunless %}
                   <span class="icon-focus"></span>
                   <span class="mbr-gallery-title mbr-fonts-style display-7">{{ post.title }}</span>
                 </div>

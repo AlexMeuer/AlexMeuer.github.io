@@ -3,7 +3,7 @@ layout: post
 title:  "Easy Boost install for Visual Studio"
 date:   2016-07-12 12:33:12 +0000
 tags: "Tutorial"
-excerpt_separator: <!-- excerpt -->
+image: "boost.png"
 ---
 I wrote this ages ago when my fellow classmates were having trouble installing the Boost C++ library for college. It's just a little interactive batch script to make the process stress-free.<!-- excerpt -->
 Currently I only have a script for Windows (Visual Studio) users but I may end up expanding it to cover other IDEs or (more likely) writing a bash script to cover Ubuntu (now my primary os).

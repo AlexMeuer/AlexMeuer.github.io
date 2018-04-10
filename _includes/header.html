@@ -10,7 +10,9 @@
       </button>
         <div class="menu-logo">
             <div class="navbar-brand">
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-2" href="{{ site.url }}">
+              {% assign link = site.url %}
+              {% if page.path == "index.html" %} {% assign link = '#' %} {% endif %}
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-2" href="{{ link }}">
                       Alexander Meuer</a></span>
             </div>
         </div>

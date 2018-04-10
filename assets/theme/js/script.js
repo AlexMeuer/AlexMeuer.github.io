@@ -553,13 +553,16 @@
 
         $(document).ready(function() {
             // disable animation on scroll on mobiles
-            if ($.isMobile()) {
+            if ($.isMobile() || $('#theme_script').attr('data-animate-all') == 'false') {
                 return;
                 // enable animation on scroll
             } else if ($('input[name=animation]').length) {
                 $('input[name=animation]').remove();
 
                 var $animatedElements = $('p, h1, h2, h3, h4, h5, a, button, small, img, li, blockquote, .mbr-author-name, em, label, input, textarea, .input-group, .iconbox, .btn-social, .mbr-figure, .mbr-map, .mbr-testimonial .card-block, .mbr-price-value, .mbr-price-figure, .dataTable, .dataTables_info').not(function() {
+                    if ($(this).hasClass("animated")) {
+                      $(this).addClass("no-auto-animate");
+                    }
                     return $(this).parents().is('.navbar, .mbr-arrow, footer, .iconbox, .mbr-slider, .mbr-gallery, .mbr-testimonial .card-block, #cookiesdirective, .mbr-wowslider, .accordion, .tab-content, #scrollToTop');
                 }).addClass('hidden animated');
 
@@ -589,10 +592,12 @@
                         if ((element_bottom_position >= window_top_position) &&
                             (element_top_position <= window_bottom_position) &&
                             ($element.hasClass('hidden'))) {
-                            $element.removeClass('hidden').addClass('fadeInUp')
-                                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                                    $element.removeClass('animated fadeInUp');
-                                });
+                              if (!$element.hasClass('no-auto-animate')) {
+                                  $element.addClass('fadeInUp')
+                              }
+                              $element.removeClass('hidden').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                                  $element.removeClass('animated fadeInUp');
+                              });
                         }
                     });
                 }

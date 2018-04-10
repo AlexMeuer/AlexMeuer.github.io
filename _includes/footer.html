@@ -48,7 +48,7 @@
 <script src="{{ script | prepend: site.url }}"></script>
   {% endfor %}
 {% endif %}
-<script src="{{ "assets/theme/js/script.js" | prepend: site.url }}"></script>
+<script async id="theme_script" data-animate-all="{{ page.animateEverything }}" src="{{ "assets/theme/js/script.js" | prepend: site.url }}"></script>
 
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
 <input name="animation" type="hidden">

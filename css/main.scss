@@ -4,15 +4,16 @@
 @charset "utf-8";
 
 @import
-        "web/assets/mobirise-icons/mobirise-icons.css",
-        "tether/tether.min.css",
-        "bootstrap/css/bootstrap.min.css",
-        "bootstrap/css/bootstrap-grid.min.css",
-        "bootstrap/css/bootstrap-reboot.min.css",
-        "dropdown/css/style.css",
-        "socicon/css/styles.css",
-        "animatecss/animate.min.css",
-        "theme/css/style.css",
-        "mobirise/css/mbr-additional.css",
-        "assets/gallery/style.css"
+        "assets/web/assets/mobirise-icons/mobirise-icons.scss",
+        "{{ site.url }}assets/tether/tether.min.css",
+        "{{ site.url }}assets/bootstrap/css/bootstrap.min.css",
+        "{{ site.url }}assets/bootstrap/css/bootstrap-grid.min.css",
+        "{{ site.url }}assets/bootstrap/css/bootstrap-reboot.min.css",
+        "assets/dropdown/css/style.scss",
+        "assets/socicon/css/styles.scss",
+        "assets/animatecss/animate.scss",
+        "assets/theme/css/style.scss",
+        "assets/mobirise/css/mbr-additional.scss",
+        "assets/gallery/style.scss",
+        "assets/pygments/monokai.scss"
 ;

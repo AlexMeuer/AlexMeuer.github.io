@@ -3,7 +3,7 @@ layout: post
 title:  "Real World Modelling - Project 3 - Prototype"
 date:   2016-02-09 17:04:00 +0000
 tags: "Projects"
-excerpt_separator: <!-- excerpt -->
+image: "rwm_start_header.png"
 ---
 Just finished making a quick prototype for Project 3 of our Real World Modelling (RWM) subject. <!-- excerpt --> The goal of RWM is to teach us (the students) about agile development in a practical, sprint based scenario. Projects 0 through 2 were week long projects but this one lasts for four weeks and sees us pick up a new team member.
 
@@ -21,5 +21,5 @@ We've to discuss our prototypes tomorrow and look into how we might implement th
 
 Whether or not it makes it into the game will be decided on how it fares in playtesting tomorrow morning...
 
-[prototype-pic]: {{ mysite.url }}/postAssets/match_prototype_1.png
-[other-prototype-pic]: {{ mysite.url }}/postAssets/match_prototype_2.png
+[prototype-pic]: {{ site.url }}/postAssets/match_prototype_1.png
+[other-prototype-pic]: {{ site.url }}/postAssets/match_prototype_2.png

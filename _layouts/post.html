@@ -1,14 +1,18 @@
 ---
 layout: default
 ---
+{% unless page.image contains 'http' %}
   <section class="mbr-section content5 cid-qKoziY5M75 mbr-parallax-background" id="content5-1s" style="background-image: url({{ site.header_image_dir | prepend: site.url | append: page.image }});" >
+{% else %}
+<section class="mbr-section content5 cid-qKoziY5M75 mbr-parallax-background" id="content5-1s" style="background-image: url({{ page.image }});" >
+{% endunless %}
       <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);"></div>
       <div class="container">
           <div class="media-container-row">
               <div class="title col-12 col-md-8">
-                  <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1 post-title" itemprop="name headline">
+                  <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1 post-title animated slideInDown" itemprop="name headline">
                     {{ page.title }}</h2>
-                  <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5 post-meta">
+                  <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5 post-meta animated slideInUp">
                     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></h3>
               </div>
           </div>
