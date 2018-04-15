@@ -7,7 +7,7 @@
 
 #DO NOT USE TABS IN THIS FILE! Use spaces instead :)
 
-gems:
+plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-sitemap
