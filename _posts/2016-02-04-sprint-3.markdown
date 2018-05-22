@@ -105,4 +105,4 @@ The third _layer_ comes into play in the Actor class. The `<Actor>` xml tag cont
 {% endhighlight %}
 
 [main-menu-png]: {{ site.url }}/postAssets/sprint3_menu.PNG
-[level-one-png]: {{ site.header_image_dir | append: page.image | prepend: site.url }}
+[level-one-png]: {{ site.header_image_dir | append: page.image | absolute_url }}

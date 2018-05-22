@@ -1,0 +1,33 @@
+- title: C++
+  content: |
+    C++ is my bread and butter.
+    I started C++ in my second year of college and it remains my go-to for large projects.
+    I try to keep up-to-date and watch C++ Weekly (Jason Turner's podcast) whenever I can.
+    I don't get to use it professionally as much as I'd like.
+- title: C#
+  content: |
+    C# was the first programming language I learnt.
+    I started out with WinForms in first year of college and moved on to the XNA framework for 2D and 3D game development.
+- title: Java
+  content: |
+    Boilerplate personified.
+    I started Java in college, using it almost exlcusively for multithreading and pattern assignments.
+    Since college, I've written Java that runs on tens of thousands of set-top-boxes and I continue to use it for Android development when Kotlin is not an option.
+- title: Android
+  content: |
+    You've seen the examples above of the apps I've worked on.
+    I started off with next to zero Android experience but boy if I didn't learn quick!
+    I was the main programmer for a casting sdk (Playmigo) and the sole Android dev for the EPIC app.
+    Go me.
+- title: Unity
+  content: |
+    I used Unity in college but they did a good job of keeping the focus off of any specific game engine.
+    We used Unity primarily for networking assignments; This was to keep the focus on the networking code itself and not on building a game, we didn't use any of the built-in networking help that Unity offers.
+
+    **UPDATE:** I now work with Unity full-time making mobile sports games for Yakuto! Woo!
+- title: Git
+  content: |
+    I wasn't going to have a git section and for a long time it wasn't on my CV either.
+    However, then I realized that git it not common knowledge among all developers and is not taught in what I think is a frighteningly high percentage of development courses, given its almost global necessity!
+    But yeah, I git.
+    I can branch, rebase, cherrypick, resolve conflicts; all that good stuff.

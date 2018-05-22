@@ -60,4 +60,4 @@ defaults:
       image: "default.jpg"
       excerpt_separator: <!-- excerpt -->
       extra-css:
-        - "assets/pygments/monokai.css"
+        - "assets/pygments/monokai.scss"

@@ -32,7 +32,7 @@ if (SDL_Init(SDL_INIT_VIDEO)) < 0) {
   return 1; //exit with an error code
 }
 {% endhighlight %}  
-Build and run your project. Make sure the compiler finds the SDL headers and that the linker find the libraries. (If you're having problems, LazyFoo' has [in-depth tutorials][lazyfoo] on getting SDL to behave nicely on your machine.)
+Build and run your project. Make sure the compiler finds the SDL headers and that the linker finds the libraries. (If you're having problems, LazyFoo' has [in-depth tutorials][lazyfoo] on getting SDL to behave nicely on your machine.)
 
 Moving forward, you'll want to declare an array of (pointers to) `SDL_Rect`s. These are your source rectangles for animation. We're going to load one texture andnuse multiple source rectangles to draw the desired part of it. You could write a sprite class to hold these but for the sake of this tutorial we're just going to do it in `main()`. If you don't know how many frames you'll have at compile time, consider using a vector instead of an array.
 

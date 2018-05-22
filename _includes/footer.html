@@ -34,21 +34,21 @@
     </div>
 </section>
 
-<script src="{{ "/assets/web/assets/jquery/jquery.min.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/popper/popper.min.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/tether/tether.min.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/bootstrap/js/bootstrap.min.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/smoothscroll/smooth-scroll.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/dropdown/js/script.min.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/viewportchecker/jquery.viewportchecker.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/touchswipe/jquery.touch-swipe.min.js" | prepend: site.url }}"></script>
-<script src="{{ "/assets/parallax/jarallax.min.js" | prepend: site.url }}"></script>
+<script src="{{ "/assets/web/assets/jquery/jquery.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/popper/popper.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/tether/tether.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/bootstrap/js/bootstrap.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/smoothscroll/smooth-scroll.js" | absolute_url }}"></script>
+<script src="{{ "/assets/dropdown/js/script.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/viewportchecker/jquery.viewportchecker.js" | absolute_url }}"></script>
+<script src="{{ "/assets/touchswipe/jquery.touch-swipe.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/parallax/jarallax.min.js" | absolute_url }}"></script>
 {% if page.extra-scripts %}
   {% for script in page.extra-scripts %}
-<script src="{{ script | prepend: site.url }}"></script>
+<script src="{{ script | absolute_url }}"></script>
   {% endfor %}
 {% endif %}
-<script async id="theme_script" data-animate-all="{{ page.animateEverything }}" src="{{ "/assets/theme/js/script.js" | prepend: site.url }}"></script>
+<script async id="theme_script" data-animate-all="{{ page.animateEverything }}" src="{{ "/assets/theme/js/script.js" | absolute_url }}"></script>
 
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
 <input name="animation" type="hidden">

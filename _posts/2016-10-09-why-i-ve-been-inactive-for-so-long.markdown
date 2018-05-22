@@ -19,7 +19,7 @@ The Friday of that week I received another call, and rushed back across the coun
 
 I buried my dad that Friday. He's the greatest man I've ever known and the world is a colder place without him.
 
-![]({{ site.header_image_dir | append: page.image | prepend: site.url }})
+![]({{ site.header_image_dir | append: page.image | absolute_url }})
 
 [leukemia]: https://en.wikipedia.org/wiki/Acute_lymphoblastic_leukemia
-[dad]: {{ site.header_image_dir | append: page.image | prepend: site.url }}
+[dad]: {{ site.header_image_dir | append: page.image | absolute_url }}

@@ -23,7 +23,7 @@ Intended for use with yaml file: _data/timeline.yml
                       <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
                           {{ item.title }}<br></h4>
                       <p class="mbr-timeline-text mbr-fonts-style display-7">
-                          {{ item.content }}</p>
+                          {{ item.content | markdownify }}</p>
                   </div>
               </div>
           </div>

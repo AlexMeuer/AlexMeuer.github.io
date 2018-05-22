@@ -2,7 +2,7 @@
 layout: default
 ---
 {% unless page.image contains 'http' %}
-  <section class="mbr-section content5 cid-qKoziY5M75 mbr-parallax-background" id="content5-1s" style="background-image: url({{ site.header_image_dir | prepend: site.url | append: page.image }});" >
+  <section class="mbr-section content5 cid-qKoziY5M75 mbr-parallax-background" id="content5-1s" style="background-image: url({{ site.header_image_dir | append: page.image | absolute_url }});" >
 {% else %}
 <section class="mbr-section content5 cid-qKoziY5M75 mbr-parallax-background" id="content5-1s" style="background-image: url({{ page.image }});" >
 {% endunless %}

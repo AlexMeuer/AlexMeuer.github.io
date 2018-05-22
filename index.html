@@ -10,8 +10,12 @@ extra-scripts:
   title="About Me"
   subtitle="Just your friendly neighborhood developer-man"
   data=site.data.timeline %}
+{% comment %}
 {% include index_sections/apps.html
   title="Previous Work"
-  subtitle="These are the apps I done coded while I as at Digisoft!"
+  subtitle="These are the apps I done coded while I was at Digisoft!"
   data=site.data.apps %}
-{% include index_sections/skills.html %}
+{% endcomment %}
+{% include index_sections/skills.html
+  title="Mad Skillz"
+  data=site.data.skills %}

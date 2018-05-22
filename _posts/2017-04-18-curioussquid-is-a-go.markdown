@@ -21,4 +21,4 @@ When we have something real to show, I'll post it here. Until then: [**Watch thi
 [org-page]: https://github.com/CuriousSquid
 [joshmoo]: https://joshmooney.github.io/Polysite/
 [larry]: https://github.com/AlexMeuer/Larry-the-Curious-Squid
-[rss]: {{ site.baseUrl }}/feed.xml
+[rss]: {{ feed.xml | absolute_url }}
