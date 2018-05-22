@@ -1,0 +1,45 @@
+- title: Computer Games Development
+  icon: mbri-hearth
+  content: |
+    Graduated with First Class Honours from the Insititute of Technology Carlow.
+
+    My favourite subjects were *Data Structures & Algorithms*, *AI for Games* and *Networking*.
+
+- title: WOSI
+  icon: mbri-globe
+  content: |
+    6 months work placement In Amsterdam using Java, Tomcat server and Java Server Pages.
+    I helped develop a website that allows teachers to create and assign tests to students and monitor performance over time.
+
+- title: Digisoft.tv
+  icon: mbri-android
+  content: |
+    Started off doing embedded C/C++ and Java for set-top-boxes but
+    quickly moved on to Android development in Java and Kotlin!
+
+    We managed to get the set-top-box project down to zero reported bugs after a year of hard work; By then I had shifted more to server maintenance for the boxes.
+
+    I'm proud to say I was the *Lead Android Developer* for the *EPIC (Irish Emmigration Museum)* audio tour app.
+    One of my favourite parts of it is the fancy tour item list: as you scroll, the elements of the list expand and contract so that the one at the top of the screen is fully expanded and focused.
+    The inspiration for it was a similar list by Ultravisual.<sup>(There's a tutorial blog post and accompanying gist in my backlog!)</sup>
+
+- title: Associate C++ Developer
+  icon: mbri-flag
+  content: |
+    While working at Digisoft.tv, I became a *Certified C++ Associate Developer* through Pearson Vue and the C++ Institute.
+    I wanted the Professional certificate but you have to get them in order;
+    The associate exam is quite straightforward if you've been taught C++ before.
+
+#    Since then, I've been back and forth over email with them about the issue where the *Certified C++ Professional Developer* isn't available to me despite obtaining the associate certificate;
+#    I keep getting told to wait or retry the prep tests but it's been two years now...
+#    Regardless, I haven't given up, I'll get those certificates!
+
+- title: Yakuto
+  icon: mbri-globe
+  content: |
+    I relocated to London to work for Yakuto, making sweet mobile sports games!
+
+#- title: Alex for world leader!
+#  icon: mbri-user
+#  content: |
+#    All your base are belong to us. Gnome Ann can save you now!

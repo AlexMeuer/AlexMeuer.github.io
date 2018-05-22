@@ -1,50 +1,54 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <!-- <h2 class="footer-heading">{{ site.title }}</h2> -->
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.linkedin_username %}
-          <li>
-            {% include icon-linkedin.html username=site.linkedin_username %}
-          </li>
-          {% endif %}
-
-          {% if site.so_id and site.so_username %}
-          <li>
-            {% include icon-stackoverflow.html username=site.so_username id=site.so_id %}
-          </li>
-          {% endif %}
-
-          {% if site.discord_invite_link and site.discord_name %}
-          <li>
-            {% include icon-discord.html name=site.discord_name link=site.discord_invite_link %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+<section once="" class="cid-qKiWCRoqwp mbr-reveal" id="footer7-1b">
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                    <div class="soc-item" title="GitHub: {{ site.github_username }}">
+                        <a href="https://github.com/{{ site.github_username}}" target="_blank" rel="noopener">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
+                      </a>
+                    </div>
+                    <div class="soc-item" title="LinkedIn: {{ site.linkedin_username }}">
+                        <a href="https://ie.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                      </a>
+                    </div>
+                    <div class="soc-item" title="StackOverflow: {{ site.so_username }}">
+                        <a href="http://stackoverflow.com/users/{{ site.so_id}}/{{ site.so_username}}" target="_blank" rel="noopener" rel="noopener">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-stackoverflow socicon"></span>
+                      </a>
+                    </div>
+                    <div class="soc-item" title="Discord: {{ site.discord_name }}">
+                        <a href="{{ site.discord_invite_link }}" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-discord socicon"></span>
+                      </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    © Copyright 2018 Alexander Meuer - All Rights Reserved - Hosted on GitHub
+                </p>
+            </div>
+        </div>
     </div>
+</section>
 
-  </div>
+<script src="{{ "/assets/web/assets/jquery/jquery.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/popper/popper.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/tether/tether.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/bootstrap/js/bootstrap.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/smoothscroll/smooth-scroll.js" | absolute_url }}"></script>
+<script src="{{ "/assets/dropdown/js/script.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/viewportchecker/jquery.viewportchecker.js" | absolute_url }}"></script>
+<script src="{{ "/assets/touchswipe/jquery.touch-swipe.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/parallax/jarallax.min.js" | absolute_url }}"></script>
+{% if page.extra-scripts %}
+  {% for script in page.extra-scripts %}
+<script src="{{ script | absolute_url }}"></script>
+  {% endfor %}
+{% endif %}
+<script async id="theme_script" data-animate-all="{{ page.animateEverything }}" src="{{ "/assets/theme/js/script.js" | absolute_url }}"></script>
 
-</footer>
+<div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
+<input name="animation" type="hidden">

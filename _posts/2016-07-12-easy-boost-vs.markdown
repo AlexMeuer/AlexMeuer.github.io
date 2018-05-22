@@ -2,8 +2,8 @@
 layout: post
 title:  "Easy Boost install for Visual Studio"
 date:   2016-07-12 12:33:12 +0000
-catagories: programming
-excerpt_separator: <!-- excerpt -->
+tags: "Tutorial"
+image: "boost.png"
 ---
 I wrote this ages ago when my fellow classmates were having trouble installing the Boost C++ library for college. It's just a little interactive batch script to make the process stress-free.<!-- excerpt -->
 Currently I only have a script for Windows (Visual Studio) users but I may end up expanding it to cover other IDEs or (more likely) writing a bash script to cover Ubuntu (now my primary os).
@@ -12,7 +12,7 @@ The majority of my classmates had both VS2013 and VS2015 installed, so the scrip
 
 Follow these steps and you'll have boost in no time:  
  - [Download Boost][boost-dl] and extract it to wherever you want.  
- - Drop <a href="{{ mysite.url }}/assets/boost_installer.bat" download>boost_installer.bat</a> into the Boost folder.  
+ - Drop <a href="{{ mysite.url }}/postAssets/boost_installer.bat" download>boost_installer.bat</a> into the Boost folder.  
  - Run the script!  
  - Win!  
 

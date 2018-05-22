@@ -4,6 +4,7 @@ title: "Android - Highlighting parts of an ImageView"
 date: "2017-08-10 20:25"
 excerpt_separator: <!-- excerpt -->
 published: false
+tags: "Android Java Tutorial"
 ---
 <!-- TODO: Proof-read. Add final result gif/webm.  -->
 Context: I had just added an interior map to my company's app; It was zoomable, pannable and each point of interest was a clickable region (more on than in another post). My next task was to implement a room highlighting feature.<!-- excerpt -->

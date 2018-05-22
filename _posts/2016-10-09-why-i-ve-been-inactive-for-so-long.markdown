@@ -1,8 +1,9 @@
 ---
 layout: "post"
-title: "Why I've been inactive for so long :hourglass:"
+title: "Why I've been inactive for so long"
 date: "2016-10-09 16:38"
-excerpt_separator: <!-- excerpt -->
+tags: "Personal"
+image: "dad.jpg"
 ---
 I figured I'd just post a quick update in case anyone's reading through this and wonders why there's a huge gap in my posts.<!-- excerpt -->
 
@@ -18,7 +19,7 @@ The Friday of that week I received another call, and rushed back across the coun
 
 I buried my dad that Friday. He's the greatest man I've ever known and the world is a colder place without him.
 
-![My hero, mentor, friend.][dad]
+![]({{ site.header_image_dir | append: page.image | absolute_url }})
 
 [leukemia]: https://en.wikipedia.org/wiki/Acute_lymphoblastic_leukemia
-[dad]: {{ mysite.url }}/assets/dad.jpg
+[dad]: {{ site.header_image_dir | append: page.image | absolute_url }}

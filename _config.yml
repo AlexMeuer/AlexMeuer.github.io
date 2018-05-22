@@ -7,7 +7,7 @@
 
 #DO NOT USE TABS IN THIS FILE! Use spaces instead :)
 
-gems:
+plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-sitemap
@@ -20,7 +20,9 @@ email: alexmeuer@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This is where I talk about programming and projects.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://AlexMeuer.github.io" # the base hostname & protocol for your site
+#url: "http://AlexMeuer.github.io/" # the base hostname & protocol for your site
+url: "http://localhost:4000/"
+header_image_dir: "assets/images/posts/headers/"
 github_username:  AlexMeuer
 linkedin_username: AlexMeuer
 discord_name: Doraleous
@@ -28,9 +30,34 @@ discord_invite_link: https://discord.gg/zq7kDGW
 so_username: alex-meuer
 so_id: 4571656
 timezone: Europe/Dublin
+highlighter: rouge
+
+sass:
+    sass_dir: .
+    style: compressed
 
 # Build settings
 markdown: kramdown
 
 # Include _pages folder when building site
 include: [_pages]
+
+# Specify front-matter default values (https://jekyllrb.com/docs/configuration/#front-matter-defaults)
+defaults:
+  - scope:
+      path: ""
+    values:
+      animateEverything: no
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      image: "default.jpg"
+      excerpt_separator: <!-- excerpt -->
+      extra-css:
+        - "assets/pygments/monokai.scss"

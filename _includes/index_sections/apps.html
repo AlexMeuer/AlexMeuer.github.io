@@ -1,0 +1,73 @@
+{% comment %}
+Intended for use with yaml file: _data/apps.yml
+{% endcomment %}
+<section class="testimonials4 cid-qKiWxiTxf9 mbr-parallax-background" id="testimonials4-19">
+
+
+<div class="container">
+  <h2 class="pb-3 mbr-fonts-style mbr-white align-center display-2">{{ include.title }}</h2>
+  <h3 class="mbr-section-subtitle mbr-light pb-3 mbr-fonts-style mbr-white align-center display-5">
+      {{ include.subtitle }}</h3>
+  <div class="col-md-10 testimonials-container">
+
+    {% for item in include.data %}
+    <div class="testimonials-item">
+        <div class="user row">
+          <div class="col-lg-3 col-md-4">
+            <div class="user_image">
+              <img src="assets/images/mbr-1620x1080.jpg" alt="" title="">
+            </div>
+          </div>
+          <div class="testimonials-caption col-lg-9 col-md-8">
+            <div class="user_text ">
+              <p class="mbr-fonts-style  display-7">
+                 <em>{{ item.content }}</em></p>
+            </div>
+            <div class="user_name mbr-bold mbr-fonts-style align-left pt-3 display-7">
+                 {{ item.title }}</div>
+            <div class="user_desk mbr-light mbr-fonts-style align-left pt-2 display-7">
+                 {{ item.subtitle }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  <div class="testimonials-item">
+      <div class="user row">
+        <div class="col-lg-3 col-md-4">
+          <div class="user_image">
+            <img src="assets/images/mbr-1620x1080.jpg" alt="" title="">
+          </div>
+        </div>
+        <div class="testimonials-caption col-lg-9 col-md-8">
+          <div class="user_text ">
+            <p class="mbr-fonts-style  display-7">
+               <em>An audio-tour app that detects which room the you're in and prompts to play the audio for it! Cool, huh? It also has a sweet parrallax expanding/contracting scrolly-wholly screen that I made myself!</em></p>
+          </div>
+          <div class="user_name mbr-bold mbr-fonts-style align-left pt-3 display-7">
+               EPIC The Irish Emmigration Museum</div>
+          <div class="user_desk mbr-light mbr-fonts-style align-left pt-2 display-7">
+               Android (Java)</div>
+        </div>
+      </div>
+    </div><div class="testimonials-item">
+      <div class="user row">
+        <div class="col-lg-3 col-md-4">
+          <div class="user_image">
+            <img src="assets/images/mbr-1619x1080.jpg" alt="" title="">
+          </div>
+        </div>
+        <div class="testimonials-caption col-lg-9 col-md-8">
+          <div class="user_text">
+            <p class="mbr-fonts-style  display-7">
+               <em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus ea, officiis consequuntur repellat minus ad veritatis? Facere similique accusamus, accusantium sunt!"</em>
+            </p>
+          </div>
+          <div class="user_name mbr-bold mbr-fonts-style align-left pt-3 display-7">
+               Playmigo</div>
+          <div class="user_desk mbr-light mbr-fonts-style align-left pt-2 display-7">
+               Android (Java)</div>
+        </div>
+      </div>
+    </div></div>
+</div>
+</section>

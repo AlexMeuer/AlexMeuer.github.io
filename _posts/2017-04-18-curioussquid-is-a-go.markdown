@@ -4,6 +4,7 @@ title: "CuriousSquid is a go!"
 date: "2017-04-18 21:52"
 excerpt_separator: <!-- excerpt -->
 published: false
+tags: "Projects"
 ---
 It's been almost a year since I finished college and I'm now beginning to develop seriously in my spare time!<!-- excerpt -->
 
@@ -20,4 +21,4 @@ When we have something real to show, I'll post it here. Until then: [**Watch thi
 [org-page]: https://github.com/CuriousSquid
 [joshmoo]: https://joshmooney.github.io/Polysite/
 [larry]: https://github.com/AlexMeuer/Larry-the-Curious-Squid
-[rss]: {{ site.baseUrl }}/feed.xml
+[rss]: {{ feed.xml | absolute_url }}

@@ -2,7 +2,7 @@
 layout: post
 title:  "C++ Ticket Algorithm"
 date:   2016-07-12 07:46:33 +0000
-catagories: programming cpp
+tags: "Tutorial C++"
 excerpt_separator: <!-- excerpt -->
 ---
 This is a basic implementation of the ticket algorithm for multithreading in C++.<!-- excerpt --><br>
