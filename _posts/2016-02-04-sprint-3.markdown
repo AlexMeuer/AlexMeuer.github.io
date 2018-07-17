@@ -6,7 +6,7 @@ tags: "Projects"
 image: "sprint3_lvlOne.PNG"
 ---
 Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
-
+<!-- excerpt -->
 ![Main Menu Img][main-menu-png] | ![Level One Img][level-one-png]
 --- | ---
   |  

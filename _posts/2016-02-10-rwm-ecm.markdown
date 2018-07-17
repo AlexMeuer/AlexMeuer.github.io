@@ -5,7 +5,7 @@ date:   2016-02-09 17:04:00 +0000
 tags: "Projects"
 ---
 I sat down this morning to learn about the _Entity Component Model_ and how I could go about implementing it in my Real World Modelling project. I expected it to be some big, unwieldy beast of a pattern; however, a few hours later I had a functioning spike written though c++.
-
+<!-- excerpt -->
 The program consists of two Entities (the first has both Position and Velocity components, whereas the second one has only Position) and a `ComponentSystem` (a `MovementSystem` to be exact). The `MovementSystem` implements a pure virtual `tick()` function that finds all Entities with both `Position` and `Velocity` elements, and simply adds the position onto the velocity; it ignores all Entities that don't have both of these components.
 
 ![Movement System Call Graph][move-sys-call-graph]
