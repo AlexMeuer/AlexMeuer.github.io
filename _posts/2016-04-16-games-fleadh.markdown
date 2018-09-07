@@ -4,7 +4,7 @@ title: "Games Fleadh"
 date: "2016-04-16 15:52"
 image: "games-fleadh-2014.jpg"
 ---
-__tl;dr__ John Romero is a super inspirational dev and makes me wish I starting coding earlier. Also, ITC rakes in the awards.
+__tl;dr__ John Romero is a super inspirational dev and makes me wish I starting coding earlier. Also, ITC rakes in the awards.<!-- excerpt -->
 
 The Games Fleadh is a game development convention held in Thurles Institute of Technology. It's a platform for students of various years to compete against each other and also for secondary school pupils to gain insight into game development.
 
