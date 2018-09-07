@@ -111,6 +111,10 @@ section {
   background-color: #000000;
 }
 
+.contain {
+  object-fit: contain;
+}
+
 /*! Text-aligns */
 
 .align-left {
@@ -128,6 +132,9 @@ section {
 @media (max-width: 767px) {
   .align-left, .align-center, .align-right, .mbr-section-btn, .mbr-section-title {
     text-align: center;
+  }
+  .blog-list-title {
+    font-size: 1rem;
   }
 }
 
@@ -527,6 +534,9 @@ nav .mbr-section-btn {
     display: -webkit-flex;
     display: -ms-flexbox;
   }
+  .blog-list-title {
+    font-size: 2rem !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -537,6 +547,9 @@ nav .mbr-section-btn {
     .navbar-toggleable-sm .navbar-collapse {
       display: -webkit-flex !important;
     }
+  }
+  .blog-list-title {
+    font-size: 3rem !important;
   }
 }
 
