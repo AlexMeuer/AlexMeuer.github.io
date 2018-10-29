@@ -2,6 +2,25 @@
 ---
 @import "{{ site.theme }}";
 
+.ribbon-outer a:hover {
+  text-decoration: none;
+}
+
+div .page-title {
+  height: 100%;
+  position: relative;
+  text-align: center;
+
+  h1 {
+    display: inline-block;
+    position: relative;
+    top: 65%;
+    font-size: 2em;
+    color: #ece4d8;
+    font-style: italic;
+  }
+}
+
 .post-list-header {
   font-size: 1.85em;
   border-bottom: .2em double #d3ccc1;
@@ -16,8 +35,10 @@
     margin: 1.1em 0 .38em;
   }
 
-  span {
+  .small {
     font-size: 0.5em;
     padding-top: 4.5em;
   }
+  .left { float: left; }
+  .right { float: right; }
 }

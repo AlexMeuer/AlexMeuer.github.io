@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Entity Component Model - basic rundown"
+date:   2016-02-09 17:04:00 +0000
+category: Projects
+---
+I sat down this morning to learn about the _Entity Component Model_ and how I could go about implementing it in my Real World Modelling project. I expected it to be some big, unwieldy beast of a pattern; however, a few hours later I had a functioning spike written though c++.
+<!-- excerpt -->
+The program consists of two Entities (the first has both Position and Velocity components, whereas the second one has only Position) and a `ComponentSystem` (a `MovementSystem` to be exact). The `MovementSystem` implements a pure virtual `tick()` function that finds all Entities with both `Position` and `Velocity` elements, and simply adds the position onto the velocity; it ignores all Entities that don't have both of these components.
+
+![Movement System Call Graph][move-sys-call-graph]
+
+__What is an Entity though?__<br>
+An `Entity` is an class that has a container of Components and a couple of public functions for adding/removing/fetching them. It doesn't actually do anything on its own and it has no derived classes.
+
+__That's where the Components come in!__<br>
+The `Component` base class also does nothing by itself. It has only one function, `getType()`, which returns the type of the component. Each derived `Component` class implements some standalone functionality. For example, a `Position` component holds an x and y value, as well as a few methods for manipulating them.
+
+While nothing derives from Entity, a whole load of stuff is going to derive from `Component`.
+![Component Inheritance][component-inheritance-graph]
+
+__Systems.__<br>
+`System`s are what tie it all together. In my example, a Movement System uses `Position` and `Velocity` components to move entities around. Whatever other components an entity may have are ignored. The entities could also have `Drawable` components, which would be completely ignored by the Movement System, but picked up and used in tandem with `Position` by a Drawing System, which in turn would ignore all `Velocity` components.
+
+That's all there is to it. It's a fairly simple pattern once you get your head around it, although it feels counter intuitive to step back from deep inheritance trees and just use a single class.
+
+I'm no expert on this topic, so should another article contradict anything here, it'd probably be best to follow the other article. Nevertheless, I hope this becomes of use to someone.
+
+
+[move-sys-call-graph]: {{ mysite.url }}/assets/posts/move_call_graph.png
+[component-inheritance-graph]: {{ mysite.url }}/assets/posts/component_inheritance_graph.png

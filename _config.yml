@@ -22,12 +22,18 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  alexmeuer
 show_downloads: false
 google_analytics: UA-97212506-1
-
+text-fill-selector: .text-fill
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-merlot
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-category-pages
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -40,3 +46,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Specify front-matter default values (https://jekyllrb.com/docs/configuration/#front-matter-defaults)
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      excerpt_separator: <!-- excerpt -->

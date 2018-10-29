@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+<h1 style="border: none;">{{ page.total_posts | pluralize: "post" }} in {{ page.title }}</h1>
+<hr>
+
+{% include post_list.html posts=page.posts %}
