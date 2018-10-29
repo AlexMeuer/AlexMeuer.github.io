@@ -1,0 +1,23 @@
+---
+---
+@import "{{ site.theme }}";
+
+.post-list-header {
+  font-size: 1.85em;
+  border-bottom: .2em double #d3ccc1;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 1.2;
+
+  h1 {
+    display: inline;
+    text-align: center;
+    font-style: italic;
+    margin: 1.1em 0 .38em;
+  }
+
+  span {
+    font-size: 0.5em;
+    padding-top: 4.5em;
+  }
+}

@@ -3,6 +3,16 @@ layout: page
 title: About
 permalink: /about/
 ---
-| ![Profile Photo][profile-pic]|__Game Development Graduate from the Institute of Technology, Carlow__<br>This handsome fellow to the left is Alex, a 22-year-old graduate, currently residing in Ireland.<br>I love programming: it's what I want to spend my life doing. I also love games, so the two had to clash somewhere and I couldn't be happier about it.<br></awkward_intro>
 
-[profile-pic]: {{ mysite.url }}/postAssets/me.jpg
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
+
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
+
+
+[jekyll-organization]: https://github.com/jekyll
