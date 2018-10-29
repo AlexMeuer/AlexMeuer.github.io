@@ -2,6 +2,62 @@
 ---
 @import "{{ site.theme }}";
 
+/* ------------------------
+ *  Begin sidebar section
+ */
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  overflow: auto;
+  z-index:10;
+  margin-left: -5em;
+
+  a {
+    display: block;
+    color: #544943;
+  }
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    display: none;  // [alex] Hide the bar until I've made it nice.
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.inline-nav {
+  display: none;
+  // Only show for narrow screens where the sidebar is hidden.
+  @media screen and (max-width: 700px) {
+    display: block;
+    text-align: center;
+
+    li {
+      display: inline;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+/*
+ *  End sidebar section
+ * ----------------------- */
+
 .ribbon-outer a:hover {
   text-decoration: none;
 }

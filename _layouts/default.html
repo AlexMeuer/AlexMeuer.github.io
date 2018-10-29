@@ -29,7 +29,6 @@
   <body>
     {% comment %}<a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>{% endcomment %}
     <div class="shell">
-
       <header>
         <span class="ribbon-outer">
           <a href="{{ site.url }}">
@@ -53,7 +52,7 @@
         <div id="no-downloads">
           <span class="inner">
             {% unless page.hide_title %}
-            <div class="page-title"><h1>{{ page.title }}</h1></div>
+            <div class="page-title text-fill"><h1>{{ page.title }}</h1></div>
             {% endunless %}
           </span>
         </div>
@@ -62,8 +61,30 @@
 
       <span class="banner-fix"></span>
 
+      <div class="sidebar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Categories
+            <ul>
+              {% for category in site.categories %}
+              <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}/index.html">{{ category | first }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
 
       <section id="main_content">
+        {% comment %}
+        This div replaces the sidebar on narrow viewports.
+        {% endcomment %}
+        <div class="inline-nav">
+          <ul>
+            {% for category in site.categories %}
+            <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}/index.html">{{ category | first }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
         {{ content }}
       </section>
 
@@ -91,6 +112,6 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
-    <script async>$('{{ site.text-fill-selector}}').textfill({});</script>
+    <script async>$('.text-fill').textfill({});</script>
   </body>
 </html>

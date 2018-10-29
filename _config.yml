@@ -22,7 +22,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  alexmeuer
 show_downloads: false
 google_analytics: UA-97212506-1
-text-fill-selector: .text-fill
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-merlot
