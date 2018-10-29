@@ -64,6 +64,9 @@
       <div class="sidebar">
         <ul>
           <li><a href="/">Home</a></li>
+          {% for page in site.pages %}
+          <li><a href="{{ page.url }}">{{ page.short_title | default: page.title | truncate: 14, '...' }}</a></li>
+          {% endfor %}
           <li>Categories
             <ul>
               {% for category in site.categories %}
@@ -80,6 +83,10 @@
         {% endcomment %}
         <div class="inline-nav">
           <ul>
+            {% for page in site.pages %}
+            <li><a href="{{ page.url }}"><strong>{{ page.title }}</strong></a></li>
+            {% endfor %}
+            <br>
             {% for category in site.categories %}
             <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}/index.html">{{ category | first }}</a></li>
             {% endfor %}

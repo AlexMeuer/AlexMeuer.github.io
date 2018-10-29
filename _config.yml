@@ -46,6 +46,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+collections:
+  pages:
+    label: special_pages
+    output: true
+
 # Specify front-matter default values (https://jekyllrb.com/docs/configuration/#front-matter-defaults)
 defaults:
   - scope:

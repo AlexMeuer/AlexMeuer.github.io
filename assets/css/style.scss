@@ -12,11 +12,16 @@
   position: fixed;
   overflow: auto;
   z-index:10;
-  margin-left: -5em;
+  margin-left: -4em;
 
   a {
     display: block;
     color: #544943;
+  }
+
+  ul {
+    margin: 2px;
+    padding: 0;
   }
 }
 

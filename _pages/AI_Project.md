@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Ai Project
 permalink: /ArnieBoids/
 doxylink: http://shovelware.github.io/arnieboids
@@ -95,14 +95,14 @@ The radar was all Davy's work. The player is always at the centre and the colour
 [results]: https://raw.githubusercontent.com/shovelware/arnieboids/master/arnie_boids_result.PNG
 [open-game-art]: http://opengameart.org
 [sfml]: http://sfml-dev.org
-[player-pic]: {{ mysite.url }}/postAssets/arnieboids/arnie.png
-[swarmboids-pic]: {{ mysite.url }}/postAssets/arnieboids/boid.png
-[mothership-pic]: {{ mysite.url }}/postAssets/arnieboids/mothership.png
-[predator-pic]: {{ mysite.url }}/postAssets/arnieboids/predator.png
-[asteroid-pic]: {{ mysite.url }}/postAssets/arnieboids/asteroid.png
-[pickup-pic]: {{ mysite.url }}/postAssets/arnieboids/pickup.png
-[radar-pic]: {{ mysite.url }}/postAssets/arnieboids/radar.png
-[example-asteroids-pic]: {{ mysite.url }}/postAssets/arnieboids/asteroids_rock.png
-[example-mothership-pic]: {{ mysite.url }}/postAssets/arnieboids/mama_no_like.png
-[example-predator-pic]: {{ mysite.url }}/postAssets/arnieboids/prey.png
-[example-swarm-pic]: {{ mysite.url }}/postAssets/arnieboids/swarm.png
+[player-pic]: {{ mysite.url }}/assets/posts/arnieboids/arnie.png
+[swarmboids-pic]: {{ mysite.url }}/assets/posts/arnieboids/boid.png
+[mothership-pic]: {{ mysite.url }}/assets/posts/arnieboids/mothership.png
+[predator-pic]: {{ mysite.url }}/assets/posts/arnieboids/predator.png
+[asteroid-pic]: {{ mysite.url }}/assets/posts/arnieboids/asteroid.png
+[pickup-pic]: {{ mysite.url }}/assets/posts/arnieboids/pickup.png
+[radar-pic]: {{ mysite.url }}/assets/posts/arnieboids/radar.png
+[example-asteroids-pic]: {{ mysite.url }}/assets/posts/arnieboids/asteroids_rock.png
+[example-mothership-pic]: {{ mysite.url }}/assets/posts/arnieboids/mama_no_like.png
+[example-predator-pic]: {{ mysite.url }}/assets/posts/arnieboids/prey.png
+[example-swarm-pic]: {{ mysite.url }}/assets/posts/arnieboids/swarm.png
