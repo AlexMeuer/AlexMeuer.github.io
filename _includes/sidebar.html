@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <ul>
+    <li><a href="/">Home</a></li>
+    {% for page in site.pages %}
+    <li><a href="{{ page.url }}">{{ page.short_title | default: page.title | truncate: 14, '...' }}</a></li>
+    {% endfor %}
+    <li><a href="/categories">Categories</a></li>
+  </ul>
+</div>

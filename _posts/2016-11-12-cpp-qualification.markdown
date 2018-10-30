@@ -2,8 +2,7 @@
 layout: post
 title:  "C++ Certified!"
 date:   2016-11-12 00:00:00 +0000
-tags: "Personal C++"
-image: "skills.jpg"
+category: Personal
 ---
 I just became a _C++ Certified Associate Programmer!_<!-- excerpt --><br>
 If you don't believe me you can view the certificate [**here**][certificate]!

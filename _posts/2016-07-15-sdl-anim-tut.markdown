@@ -2,8 +2,7 @@
 layout: post
 title:  "SDL Texture Packer Animation Tutorial"
 date:   2016-07-12 12:56:04 +0000
-tags: "Tutorial C++"
-image: "scott.png"
+category: Tutorials
 ---
 In this tutorial I will walk you through animating a sprite with a texture packer.<!-- excerpt -->
 
@@ -222,11 +221,11 @@ while (true)
 {% endhighlight %}>
 
 <h2><u>Voila. Animation with a texture packer.</u></h2>
-<video src="{{ mysite.url }}/postAssets/SDLAnimTut/example.mp4" controls></video>
+<video src="{{ mysite.url }}/assets/posts/SDLAnimTut/example.mp4" controls></video>
 
 If you want to continue from this point, you can take the variables from main and create a Sprite class and/or Animation class.
 
-[source]: {{ mysite.url }}/postAssets/SDLAnimTut/Source.zip
+[source]: {{ mysite.url }}/assets/posts/SDLAnimTut/Source.zip
 [libsdl]: https://www.libsdl.org/
 [libsdl-img]: https://www.libsdl.org/projects/SDL_image/
 [libsdl-img-direct]: https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-VC.zip

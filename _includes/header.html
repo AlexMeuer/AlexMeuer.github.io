@@ -1,43 +1,31 @@
-<section class="menu cid-qKil2jzdIS" once="menu" id="menu1-e">
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-      </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-              {% assign link = site.url %}
-              {% if page.path == "index.html" %} {% assign link = '#' %} {% endif %}
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-2" href="{{ link }}">
-                      Alexander Meuer</a></span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="#top">
-                      </a>
-                </li>
-                <li class="nav-item"><a class="nav-link link text-white display-4" href="{{ "index.html#timeline2-18" | absolute_url }}"><span class="mbri-info mbr-iconfont mbr-iconfont-btn"></span>
+<header>
+  <span class="ribbon-outer">
+    <a href="{{ site.url }}">
+      <span class="ribbon-inner">
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+      </span>
+    </a>
+    <span class="left-tail"></span>
+    <span class="right-tail"></span>
+  </span>
+</header>
 
-                      About</a></li>
-{% comment %}
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="{{ "index.html#testimonials4-19" | absolute_url }}"><span class="mbri-setting mbr-iconfont mbr-iconfont-btn"></span>
+{% if site.show_downloads %}
+  <section id="downloads">
+    <span class="inner">
+      <a href="{{ site.github.owner_url }}" class="zip"><em>alexmeuer</em>GitHub</a><a href="{{ site.github.tar_url }}" class="tgz"><em>alexmeuer</em>StackOverflow</a>
+    </span>
+  </section>
+{% else %}
+  <div id="no-downloads">
+    <span class="inner">
+      {% unless page.hide_title %}
+      <div class="page-title text-fill"><h1>{{ page.title }}</h1></div>
+      {% endunless %}
+    </span>
+  </div>
+{% endif %}
 
-                      Work</a>
-                </li>
-{% endcomment %}
-                <li class="nav-item"><a class="nav-link link text-white display-4" href="{{ "index.html#tabs1-1i" | absolute_url }}"><span class="mbri-speed mbr-iconfont mbr-iconfont-btn"></span>
 
-                      Skills</a></li>
-                <li class="nav-item"><a class="nav-link link text-white display-4" href="{{ "blog.html" | absolute_url }}"><span class="mbri-chat mbr-iconfont mbr-iconfont-btn"></span>Blog</a></li>
-            </ul>
-
-        </div>
-    </nav>
-</section>
+<span class="banner-fix"></span>

@@ -1,64 +1,59 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-#DO NOT USE TABS IN THIS FILE! Use spaces instead :)
-
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Alex Meuer
+email: alexmeuer+site@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to my humble aBlog
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  alexmeuer
+show_downloads: false
+google_analytics: UA-97212506-1
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-merlot
 plugins:
+  - jekyll-feed
   - jekyll-seo-tag
   - jemoji
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-github-metadata
 
-# Site settings
-title: Alexander Meuer
-job_title: Game Developer 
-email: alexmeuer@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  This is where I talk about programming and projects.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://AlexMeuer.github.io/" # the base hostname & protocol for your site
-#url: "http://localhost:4000/"
-header_image_dir: "assets/images/posts/headers/"
-github_username:  AlexMeuer
-linkedin_username: AlexMeuer
-discord_name: Doraleous
-discord_invite_link: https://discord.gg/zq7kDGW
-so_username: alex-meuer
-so_id: 4571656
-timezone: Europe/Dublin
-highlighter: rouge
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
-sass:
-    sass_dir: .
-    style: compressed
-
-# Build settings
-markdown: kramdown
-
-# Include _pages folder when building site
-include: [_pages]
+collections:
+  pages:
+    label: special_pages
+    output: true
 
 # Specify front-matter default values (https://jekyllrb.com/docs/configuration/#front-matter-defaults)
 defaults:
   - scope:
-      path: ""
-    values:
-      animateEverything: no
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
       path: "_posts"
       type: "posts"
     values:
-      image: "default.jpg"
       excerpt_separator: <!-- excerpt -->
-      extra-css:
-        - "assets/pygments/monokai.scss"

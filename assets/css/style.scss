@@ -1,0 +1,105 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* ------------------------
+ *  Begin sidebar section
+ */
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  overflow: auto;
+  z-index:10;
+  margin-left: -4em;
+
+  a {
+    display: block;
+    color: #544943;
+  }
+
+  ul {
+    margin: 2px;
+    padding: 0;
+  }
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    display: none;  // [alex] Hide the bar until I've made it nice.
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.inline-nav {
+  display: none;
+  // Only show for narrow screens where the sidebar is hidden.
+  @media screen and (max-width: 700px) {
+    display: block;
+    text-align: center;
+
+    li {
+      display: inline;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+/*
+ *  End sidebar section
+ * ----------------------- */
+
+.ribbon-outer a:hover {
+  text-decoration: none;
+}
+
+div .page-title {
+  height: 100%;
+  position: relative;
+  text-align: center;
+
+  h1 {
+    display: inline-block;
+    position: relative;
+    top: 65%;
+    font-size: 2em;
+    color: #ece4d8;
+    font-style: italic;
+  }
+}
+
+.post-list-header {
+  font-size: 1.85em;
+  border-bottom: .2em double #d3ccc1;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 1.2;
+
+  h1 {
+    display: inline;
+    text-align: center;
+    font-style: italic;
+    margin: 1.1em 0 .38em;
+  }
+
+  .small {
+    font-size: 0.5em;
+    padding-top: 4.5em;
+  }
+  .left { float: left; }
+  .right { float: right; }
+}

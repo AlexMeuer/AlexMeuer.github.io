@@ -2,7 +2,7 @@
 layout: post
 title:  "Sprint 3 is finally over!"
 date:   2016-02-04 15:33:00 +0000
-tags: "Projects"
+category: Projects
 image: "sprint3_lvlOne.PNG"
 ---
 Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
@@ -104,5 +104,5 @@ The third _layer_ comes into play in the Actor class. The `<Actor>` xml tag cont
 </Hero>
 {% endhighlight %}
 
-[main-menu-png]: {{ site.url }}/postAssets/sprint3_menu.PNG
-[level-one-png]: {{ site.header_image_dir | append: page.image | absolute_url }}
+[main-menu-png]: {{ site.url }}/assets/posts/sprint3_menu.PNG
+[level-one-png]: {{ site.url }}/assets/posts/{{ page.image }}
