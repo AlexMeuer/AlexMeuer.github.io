@@ -32,7 +32,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-github-metadata
-  - jekyll-category-pages
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

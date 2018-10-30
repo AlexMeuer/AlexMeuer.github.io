@@ -9,7 +9,8 @@
   </h1>
   <span class="small left">{{ post.date | date_to_string }}</span>
   <span class="small right">
-    <a href="{{ site.url }}/category/{{ post.category | url_encode }}/index.html">{{ post.categories | first | truncate: 10, '...' }}</a>
+    {% capture catslug %}{{ post.categories.first | slugify }}{% endcapture %}
+    <a href="{{ site.url | append:'/categories/#' | append:catslug | relative_url }}">{{ post.categories | first | truncate: 10, '...' }}</a>
   </span>​
 </div>
 <div style="clear:both;"></div>
