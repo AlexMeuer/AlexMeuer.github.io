@@ -3,8 +3,10 @@ layout: "post"
 title: "Why I've been inactive for so long"
 date: "2016-10-09 16:38"
 category: Personal
+featured_image: '/assets/posts/dad.jpg'
+description: "I figured I'd just post a quick update in case anyone's reading through this and wonders why there's a huge gap in my posts."
 ---
-I figured I'd just post a quick update in case anyone's reading through this and wonders why there's a huge gap in my posts.<!-- excerpt -->
+I figured I'd just post a quick update in case anyone's reading through this and wonders why there's a huge gap in my posts.
 
 My father fought cancer for the last eight years ([_acute lymphoblastic leukemia_][leukemia]). I was 14 when he was diagnosed and my sister was 12. He was told over and over that he had _X_ months to live but he never let it get to him. He was constantly optimistic, even in the face of death. A few years into treatment and the doctor's basically told him "We actually don't know how you've survived this". He said he was surviving for his kids and by the grace of God.
 
@@ -18,7 +20,7 @@ The Friday of that week I received another call, and rushed back across the coun
 
 I buried my dad that Friday. He's the greatest man I've ever known and the world is a colder place without him.
 
-![]({{ site.url }}/assets/posts/{{ page.image }})
+![RIP][dad]
 
 [leukemia]: https://en.wikipedia.org/wiki/Acute_lymphoblastic_leukemia
-[dad]: {{ site.url }}/assets/posts/{{ page.image }}
+[dad]: {{ site.url }}{{ page.featured_image }}

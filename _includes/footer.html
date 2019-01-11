@@ -1,11 +1,16 @@
-<footer>
-  <span class="ribbon-outer">
-    <span class="ribbon-inner">
-      <p>Projects by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
-    </span>
-    <span class="left-tail"></span>
-    <span class="right-tail"></span>
-  </span>
-  <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using <a href="https://pages-themes.github.io/merlot/">Merlot</a></p>
-  <span class="octocat"></span>
+<footer class="footer">
+
+	<div class="wrap">
+
+		<p class="footer__text">{{ site.data.settings.footer_settings.footer_tagline }}</p>
+
+		<div class="footer__copyright">
+			<span>© {{ 'now' | date: "%Y" }} {{ site.data.settings.basic_settings.site_title }}</span>
+			<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+		</div>
+
+		{% include socials.html %}
+
+	</div>
+
 </footer>

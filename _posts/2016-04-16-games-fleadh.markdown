@@ -2,8 +2,9 @@
 layout: "post"
 title: "Games Fleadh"
 date: "2016-04-16 15:52"
-image: "games-fleadh-2014.jpg"
+featured_image: '/assets/posts/games-fleadh-2014.jpg'
 category: Projects
+description: 'We won Best In Visual Engineering as well as Best Windows Phone Game!'
 ---
 __tl;dr__ John Romero is a super inspirational dev and makes me wish I starting coding earlier. Also, ITC rakes in the awards.<!-- excerpt -->
 

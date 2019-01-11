@@ -3,15 +3,15 @@ layout: post
 title:  "Sprint 3 is finally over!"
 date:   2016-02-04 15:33:00 +0000
 category: Projects
-image: "sprint3_lvlOne.PNG"
+featured_image: '/assets/posts/sprint3_lvlOne_2.PNG'
+description: "Sprint 3 just ended for my Final Year Project so I figured I'd talk a little about my main focus for this sprint: Data driven levels and enemies!"
 ---
 Sprint 3 just ended for our FYPs (Final Year Project) so I figured I'd talk a little about my main focus for this sprint.
-<!-- excerpt -->
-![Main Menu Img][main-menu-png] | ![Level One Img][level-one-png]
---- | ---
-  |  
+![Main Menu Img][main-menu-png]
 
 My initial goal was to have all my Scene objects loading from xml files. While I didn't get to fully complete this goal before the deadline, I did get pretty close: close enough to complete it before Sprint 4 starts. As it stands, I have the `SceneProxy` written to allow lazy loading of the Scenes themselves from xml files, but the class can't be used with my `SceneManager` until I have Menu scenes loading from xml (currently I only have Level scenes loading from xml).
+
+![Level One Img][level-one-png]
 
 I have 3 _layers_ of xml loading in my game now. _Layers_ might not be a great word for it but it helps to explain how it works. The first _layer_ is the Level constructor; It takes a `tinyXML2::XMLElement*`, "`<Level>`" surprise surprise, and initializes its members from the tag's body. It's simple and straightforward until you get to the `<Units>` tag, whose body is filled with `<Unit type="xyz">` tags. Each `<Unit>` tag denotes a single `Pawn` (`Minion` or `Hero`) to populate the level with. A `UnitFactory` takes the type attribute and returns the created `Pawn`.
 
@@ -104,5 +104,8 @@ The third _layer_ comes into play in the Actor class. The `<Actor>` xml tag cont
 </Hero>
 {% endhighlight %}
 
+![Level One Img][level-one2-png]
+
 [main-menu-png]: {{ site.url }}/assets/posts/sprint3_menu.PNG
-[level-one-png]: {{ site.url }}/assets/posts/{{ page.image }}
+[level-one-png]: {{ site.url }}/assets/posts/sprint3_lvlOne.PNG
+[level-one2-png]: {{ site.url }}/assets/posts/sprint3_lvlOne_2.PNG
