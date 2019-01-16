@@ -1,5 +1,5 @@
 basic_settings:
-  site_title: Personal
+  site_title: Alexander Meuer
   favicon_image: /assets/favicon.png
 
 header_settings:
@@ -14,8 +14,8 @@ menu_settings:
       url: '/blog/'
     - title: 'About'
       url: '/about'
-    - title: 'Contact'
-      url: '/contact'
+    # - title: 'Contact'
+    #   url: '/contact'
 
 footer_settings:
   footer_tagline: This is where I talk about programming and projects.
