@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Ai Project
+title: ArnieBoids
+subtitle: Artificial Intelligence
 permalink: /ArnieBoids/
 doxylink: http://shovelware.github.io/arnieboids
 featured_image: 'https://img.itch.zone/aW1hZ2UvMjI0Mjg4LzEwNTkzMzMucG5n/315x250%23c/%2F%2BLdqw.png'

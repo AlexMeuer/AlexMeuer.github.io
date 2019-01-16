@@ -1,6 +1,7 @@
 ---
 layout: post
 title: FinalYearProject
+subtitle: A non-grid tower-defence game
 short_title: FYP
 permalink: /fyp_redirect/
 featured_image: '/assets/projects/fyp/blood_code.png'
