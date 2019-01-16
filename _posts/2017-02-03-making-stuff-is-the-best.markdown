@@ -9,7 +9,7 @@ published: false
 
 I'm just home from work, it's just gone four o'clock (I finish early because I start early), and I'd like to explain why making stuff is the best.<!-- excerpt -->
 
-When I say _making stuff_, I mean _willing something new into existence which didn't exist at all a short while ago_. I just finished a two week sprint where I had to create a Roku channel from scratch with zero prior experience. Before starting the sprint I had never even used a Roku device before, let alone programmed in Brightscript! However, now our company has a neat-o Roku channel that does some pretty fancy-shmancy stuff involving streaming and dynamic branding. :wink:
+When I say _making stuff_, I mean _willing something new into existence which didn't exist at all a short while ago_. I just finished a two week sprint where I had to create a Roku channel from scratch with zero prior experience. Before starting the sprint I had never even used a Roku device before, let alone programmed in Brightscript! However, now our company has a neat-o Roku channel that does some pretty fancy-shmancy stuff involving streaming and dynamic branding.
 
 If you're reading this and have no idea what the heck Roku or BrightScript may be, allow me to enlighten you. A Roku device is a streaming dongle that you plug into your telly, just like a Chromecast device; Brightscript is the special-snowflake scripting language used to write apps for Roku devices, just like HTML and Javascript for Chromecast devices!
 

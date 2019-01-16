@@ -3,7 +3,8 @@ layout: post
 title:  "C++ Ticket Algorithm"
 date:   2016-07-12 07:46:33 +0000
 category: Tutorials
-excerpt_separator: <!-- excerpt -->
+featured_image: '/assets/posts/ticket_algo.png'
+description: A simple implementation of the ticket algorithm in C++. Part of a college assignment.
 ---
 This is a basic implementation of the ticket algorithm for multithreading in C++.<!-- excerpt --><br>
 I mean it when I say basic, I programmed this in a single lab for _Software Engineering for Games_. It had to satisfy a strict layout and rubric so it's not the nicest looking code but it shouldn't prove difficult to read or understand (it also may not be 100% perfect, but I got full marks for it).<br>

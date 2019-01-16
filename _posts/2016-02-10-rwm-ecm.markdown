@@ -3,6 +3,8 @@ layout: post
 title:  "Entity Component Model - basic rundown"
 date:   2016-02-09 17:04:00 +0000
 category: Projects
+featured_image: '/assets/posts/component_inheritance_graph.png'
+description: 'A basic outline of the ECM. I had to implement this as a task for group project (this requirement was later removed as the lecturers deemed it too difficult to pull off in the time constraints!).'
 ---
 I sat down this morning to learn about the _Entity Component Model_ and how I could go about implementing it in my Real World Modelling project. I expected it to be some big, unwieldy beast of a pattern; however, a few hours later I had a functioning spike written though c++.
 <!-- excerpt -->

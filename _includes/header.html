@@ -1,31 +1,32 @@
-<header>
-  <span class="ribbon-outer">
-    <a href="{{ site.url }}">
-      <span class="ribbon-inner">
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-      </span>
-    </a>
-    <span class="left-tail"></span>
-    <span class="right-tail"></span>
-  </span>
+<header class="header">
+
+	<div class="wrap">
+
+		{% if site.data.settings.header_settings.logo_image %}
+		<a href="/" class="header__logo">
+			<img src="{{ site.data.settings.header_settings.logo_image }}" class="header__logo__img">
+		</a>
+		{% else %}
+		<a href="/" class="header__title">
+			{{ site.data.settings.basic_settings.site_title }}
+		</a>
+		{% endif %}
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					{% for item in site.data.settings.menu_settings.menu_items %}
+					<li class="menu__list__item">
+						<a href="{{ item.url }}" class="menu__list__item__link">{{ item.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
 </header>
-
-{% if site.show_downloads %}
-  <section id="downloads">
-    <span class="inner">
-      <a href="{{ site.github.owner_url }}" class="zip"><em>alexmeuer</em>GitHub</a><a href="{{ site.github.tar_url }}" class="tgz"><em>alexmeuer</em>StackOverflow</a>
-    </span>
-  </section>
-{% else %}
-  <div id="no-downloads">
-    <span class="inner">
-      {% unless page.hide_title %}
-      <div class="page-title text-fill"><h1>{{ page.title }}</h1></div>
-      {% endunless %}
-    </span>
-  </div>
-{% endif %}
-
-
-<span class="banner-fix"></span>

@@ -3,6 +3,8 @@ layout: post
 title:  "SDL Texture Packer Animation Tutorial"
 date:   2016-07-12 12:56:04 +0000
 category: Tutorials
+featured_image: '/assets/posts/sdl_anim_tut.png'
+description: 'In this tutorial I will walk you through animating a sprite with a texture packer in C++.'
 ---
 In this tutorial I will walk you through animating a sprite with a texture packer.<!-- excerpt -->
 
@@ -218,7 +220,7 @@ while (true)
 	//Update the screen with rendering operations
 	SDL_RenderPresent(renderer);
 }
-{% endhighlight %}>
+{% endhighlight %}
 
 <h2><u>Voila. Animation with a texture packer.</u></h2>
 <video src="{{ mysite.url }}/assets/posts/SDLAnimTut/example.mp4" controls></video>
