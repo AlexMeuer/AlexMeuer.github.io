@@ -3,6 +3,7 @@ title: Thank you
 subtitle: Your message was sent successfully.
 description: A sleek, modern Jekyll theme for personal websites.
 featured_image: /assets/demo/contact.jpg
+published: false
 ---
 
 ![](/assets/demo/about.jpg)
