@@ -2,13 +2,12 @@
 layout: "post"
 title: "Android - Highlighting parts of an ImageView"
 date: "2017-08-10 20:25"
-published: false
 category: Tutorials
-featured_image: ''
+featured_image: '/assets/posts/android_bitmap_highlight_example.png'
 description: 'Highlighting parts of an image in Java for Android. Includes working source code.'
 ---
 <!-- TODO: Proof-read. Add final result gif/webm.  -->
-Context: I had just added an interior map to my company's app; It was zoomable, pannable and each point of interest was a clickable region (more on than in another post). My next task was to implement a room highlighting feature.<!-- excerpt -->
+Context: I had just added an interior map to my company's app; It was zoomable, pannable and each point of interest was a clickable region. My next task was to implement a room highlighting feature.<!-- excerpt -->
 
 This is what the finished product looks like:  
 ![ImageHighlightingExample][final-result-pic]
@@ -112,5 +111,5 @@ Here's my source code for this:
 <script src="https://gist.github.com/AlexMeuer/ac2480f9388cfd6888d98c2c1228515c.js"></script>
 
 [photo-view]: https://github.com/chrisbanes/PhotoView
-[final-result-pic]: #
+[final-result-pic]: {{ site.url }}{{ page.featured_image }}
 [gist]: https://gist.github.com/AlexMeuer/ac2480f9388cfd6888d98c2c1228515c#file-highlightablebitmapdrawable-java
