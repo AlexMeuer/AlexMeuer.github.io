@@ -2,7 +2,7 @@
 layout: post
 title:  "C++ Ticket Algorithm"
 date:   2016-07-12 07:46:33 +0000
-category: Tutorials
+category: Tutorial
 featured_image: '/assets/posts/ticket_algo.png'
 description: A simple implementation of the ticket algorithm in C++. Part of a college assignment.
 ---

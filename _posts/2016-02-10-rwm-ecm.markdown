@@ -2,7 +2,7 @@
 layout: post
 title:  "Entity Component Model - basic rundown"
 date:   2016-02-09 17:04:00 +0000
-category: Projects
+category: Project
 featured_image: '/assets/posts/component_inheritance_graph.png'
 description: 'A basic outline of the ECM. I had to implement this as a task for group project (this requirement was later removed as the lecturers deemed it too difficult to pull off in the time constraints!).'
 ---

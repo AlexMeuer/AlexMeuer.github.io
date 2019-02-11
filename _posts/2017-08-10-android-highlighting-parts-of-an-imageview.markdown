@@ -2,7 +2,7 @@
 layout: "post"
 title: "Android - Highlighting parts of an ImageView"
 date: "2017-08-10 20:25"
-category: Tutorials
+category: Tutorial
 featured_image: '/assets/posts/android_bitmap_highlight_example.png'
 description: 'Highlighting parts of an image in Java for Android. Includes working source code.'
 ---

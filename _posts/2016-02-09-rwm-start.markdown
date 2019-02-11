@@ -5,7 +5,7 @@ date:   2016-02-09 17:04:00 +0000
 tags: "Projects"
 description: 'Just finished making a quick prototype for Project 3 of our Real World Modelling subject...'
 featured_image: '/assets/posts/rwm_start_header.png'
-category: Projects
+category: Project
 ---
 Just finished making a quick prototype for Project 3 of our Real World Modelling (RWM) subject.The goal of RWM is to teach us (the students) about agile development in a practical, sprint based scenario. Projects 0 through 2 were week long projects but this one lasts for four weeks and sees us pick up a new team member.
 
