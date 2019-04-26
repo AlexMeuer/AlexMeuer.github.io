@@ -6,7 +6,6 @@ category: Tutorial
 featured_image: '/assets/posts/fab-net-photo.jpg'
 description: 'How to throttle the life out of a network bridge:<br>Emulating wide area network delays and generally crippling a network.'
 ---
-
 {% comment %}
   TODO: Anchor links
   TODO: Maybe include a section or something about compiling the usb-ethernet adapter drivers from source for the Pi?
@@ -26,7 +25,6 @@ description: 'How to throttle the life out of a network bridge:<br>Emulating wid
  - Controlling the traffic via internet browser
  - References
  {% endcomment %}
-
  Perhaps, like me, you've got a cool peer-to-peer (P2P) game and you want to test it. _Great!_ However, because it's P2P, there's no middleman server that you can use to throttle traffic between the test devices. _Oh no! What do we do!?_
 
  Well, we could use `tc` (traffic control) on our (maybe, linux) router to slow down the traffic, but that's the router we use to access the internet; it's a no go.
