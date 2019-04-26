@@ -108,6 +108,35 @@ width:110px;
 * Agile Methodologies 1000%
 * Bugs 0%
 
+## Game List
+
+* Burnout 3: Takedown (PS2)
+	- Best arcade racer ever made.
+	- Stands the test of time.
+	- I've 100%-ed this many times over.
+* Dwarf Fortress
+	- I've lost countless hours to this and it's unlikely I'll ever stop.
+	- As a programmer, I found the learning curve not too steep. Others disagree strongly.
+	- Manage a ridiculously complex simulation of manic depressive dwarves!
+* The Witcher
+	- Fantastic writing backed up by really solid mechanics.
+	- Plays like a good book reads.
+* Aurora 4X
+	- Haven't started this, but want to.
+	- The Dwarf Fortress of 4X games.
+
+## Reading List
+
+* Discworld Series - Terry Pratchett
+	- Absolutely fantastic. A must-read.
+* 12 Rules for Life - Jordan Peterson
+	- In Progress
+* Clean Code - Uncle Bob
+	- TODO
+* Clean Coder - Uncle Bob
+	- Short read.
+	- Mostly stories about his past with lessons embedded.
+
 ## Features
 
 We've packed Personal full of powerful features to help showcase your work:

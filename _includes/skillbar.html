@@ -1,7 +1,7 @@
 {% comment %}
 USAGE: {% include skillbar.html label="foo" percent="25" endLabel="25%" labelColor="#123456" barColor="#123456" %}
 {% endcomment %}
-<div class="skillbar clearfix " data-percent="40%">
+<div class="skillbar clearfix " data-percent="{{ include.percent }}%">
 	<div class="skillbar-title" style="background: {{ include.labelColor}};"><span>{{ include.label }}</span></div>
 	<div class="skillbar-bar" style="background: {{ include.barColor}}; width: {{ include.percent }}%;"></div>
 	<div class="skill-bar-percent">{{ include.endLabel }}</div>
