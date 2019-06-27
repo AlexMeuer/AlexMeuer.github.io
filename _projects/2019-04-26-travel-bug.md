@@ -2,7 +2,7 @@
 title: 'Secret Travel App'
 subtitle: 'A closed-source travel app with a focus on user safety.'
 description: 'Written in Dart and harnessing the power and flexibility of the Flutter framework. Myself and others are bringing a new travel app (name is a secret right now) to the market with an eye on user safety and security.'
-featured_image: 'https://source.unsplash.com/CIuakYIjadc'
+featured_image: 'https://source.unsplash.com/CIuakYIjadc/1600x900'
 ---
 
 Due to this being an unreleased, unannounced, closed-source project, there really isn't much I can say right now. I'll fill this page out as things are announced and I'll blog about it closer to release.

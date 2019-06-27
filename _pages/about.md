@@ -2,7 +2,7 @@
 title: About me
 subtitle: Let's get to know each other!
 description: Let's get to know each other!
-featured_image: "https://source.unsplash.com/HH4WBGNyltc"
+featured_image: "https://source.unsplash.com/HH4WBGNyltc/1600x900"
 published: false
 ---
 

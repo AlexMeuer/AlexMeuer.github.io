@@ -4,7 +4,7 @@ title: FinalYearProject
 subtitle: A non-grid tower-defence game
 short_title: FYP
 permalink: /fyp_redirect/
-featured_image: '/assets/projects/fyp/blood_code.png'
+featured_image: '/assets/projects/fyp/blood_code.jpg'
 description: '<a href="https://github.com/AlexMeuer/FinalYearProject">Source</a><br><a href="http://AlexMeuer.github.io/FinalYearProject">Doxygen</a>'
 ---
 In the year four of my course, each of us had to develop a game from inception right through to finished product. Each of us pitched our game to the lectures and rest of the class and, once approved, started designing and developing. We took an agile approach, even though it was a one-man project, using JIRA as task tracker and [github](https://github.com/AlexMeuer/FinalYearProject) to host it.
