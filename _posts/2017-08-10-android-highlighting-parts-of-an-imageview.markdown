@@ -1,12 +1,12 @@
 ---
 layout: "post"
 title: "Android - Highlighting parts of an ImageView"
+subtitle: "Includes working source code in Gist form!"
 date: "2017-08-10 20:25"
 category: Tutorial
 featured_image: '/assets/posts/android_bitmap_highlight_example.png'
 description: 'Highlighting parts of an image in Java for Android. Includes working source code.'
 ---
-<!-- TODO: Proof-read. Add final result gif/webm.  -->
 Context: I had just added an interior map to my company's app; It was zoomable, pannable and each point of interest was a clickable region. My next task was to implement a room highlighting feature.<!-- excerpt -->
 
 This is what the finished product looks like:  

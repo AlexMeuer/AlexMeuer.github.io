@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Fabricating a poor network"
+subtitle: "aka Bullying your devices"
 date:   2019-03-02 18:34:00 +0000
 category: Tutorial
 featured_image: '/assets/posts/fab-net-photo.jpg'
@@ -9,8 +10,6 @@ description: 'How to throttle the life out of a network bridge:<br>Emulating wid
 {% comment %}
   TODO: Anchor links
   TODO: Maybe include a section or something about compiling the usb-ethernet adapter drivers from source for the Pi?
-
-
  - Hardware Setup
  - Bridging the connection
  - Making the network slow and/or unreliable
