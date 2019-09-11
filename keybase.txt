@@ -1,0 +1,47 @@
+==================================================================
+https://keybase.io/alexmeuer
+--------------------------------------------------------------------
+I hereby claim:
+ * I am an admin of https://alexmeuer.com
+ * I am alexmeuer (https://keybase.io/alexmeuer) on keybase.
+ * I have a public key ASD06fODX_mVCYdBLG2-PCxeWrgVL_riC2ITz16s8sJAtQo
+To do so, I am signing this object:
+{
+ "body": {
+   "key": {
+     "eldest_kid": "0120f4e9f3835ff9950987412c6dbe3c2c5e5ab8152ffae20b6213cf5eacf2c240b50a",
+     "host": "keybase.io",
+     "kid": "0120f4e9f3835ff9950987412c6dbe3c2c5e5ab8152ffae20b6213cf5eacf2c240b50a",
+     "uid": "b6d57a530d7d7fa29c2cef7d98032f19",
+     "username": "alexmeuer"
+   },
+   "merkle_root": {
+     "ctime": 1568216823,
+     "hash": "ed4542aa3a83c8fd376d4bf43fe555344529aaaea49f393258b35c639fc3d8788c30260521b218a63f62e3dd62355f1a96aab6b1a7c70784b225730f9ee24920",
+     "hash_meta": "5a79bb6e93a71a978be6d93a899fba97a49b892cff7f5a6900319a13854101bd",
+     "seqno": 6750961
+   },
+   "service": {
+     "entropy": "JnGPGuFDvmGUjA5wzRsed7yo",
+     "hostname": "alexmeuer.com",
+     "protocol": "https:"
+   },
+   "type": "web_service_binding",
+   "version": 2
+ },
+ "client": {
+   "name": "keybase.io go client",
+   "version": "4.4.1"
+ },
+ "ctime": 1568216829,
+ "expire_in": 504576000,
+ "prev": "1ed02d7baa03cbc75a7c333d2383c10458add2460d862dbfabde244f2c247fcf",
+ "seqno": 11,
+ "tag": "signature"
+}
+which yields the signature:
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg9Onzg1/5lQmHQSxtvjwsXlq4FS/64gtiE89erPLCQLUKp3BheWxvYWTESpcCC8QgHtAte6oDy8dafDM9I4PBBFit0kYNhi2/q94kTywkf8/EIAh9X6twH3giUi+ZVR6EcJPDlvDY+xWgxY49OqxtDrWXAgHCo3NpZ8RAt4QQmDJeMxdEeIZS5nVcLA63O+Pjm8ulTIOaWGL8QGkj48ao/9aE+8/bxPrCamIky6XoEfZavB314xGL1de1DKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBdPvKUZq8eDykvnT8/Wug9o/r6l4YM5rbg4Ak8eazW2o3RhZ80CAqd2ZXJzaW9uAQ==
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+View my publicly-auditable identity here: https://keybase.io/alexmeuer
+==================================================================
