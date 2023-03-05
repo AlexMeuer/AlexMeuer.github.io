@@ -4,6 +4,7 @@ title: "Slack Queue Bot"
 subtitle: "A simple per-channel queue for Slack"
 date: 2022-09-27 16:14:00 +0200
 featured_image: "https://source.unsplash.com/ZAbIO5eas9Q/1600x900"
+published: false
 ---
 
 > If you were redirected to this page by the SlackQueue bot, it means you installed it successfully!

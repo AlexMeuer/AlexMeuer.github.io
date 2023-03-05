@@ -6,7 +6,6 @@ category: Tutorial
 featured_image: '/assets/posts/boost.png'
 ---
 I wrote this ages ago when my fellow classmates were having trouble installing the Boost C++ library for college. It's just a little interactive batch script to make the process stress-free.<!-- excerpt -->
-Currently I only have a script for Windows (Visual Studio) users but I may end up expanding it to cover other IDEs or (more likely) writing a bash script to cover Ubuntu (now my primary os).
 
 The majority of my classmates had both VS2013 and VS2015 installed, so the script holds the user's hand through picking a toolset (Boost install will default to VS2015 toolset which means that trying to use it with VS2013 causes headaches). Apart from that, all it really does is run the two boost install scripts in the right order.
 

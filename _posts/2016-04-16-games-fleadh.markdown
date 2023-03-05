@@ -18,7 +18,7 @@ In second year, we (same team from first year) were (once again) the only ones t
 In third year we didn't compete. We had two reasons:
 <ul>
 <li>One of our team members from the previous years was repeating second year and no one else wanted to take his place.</li>
-<li>Third year was a nine month curriculum crammed into six months on acocunt of work experience beginning at the start of March.</li>
+<li>Third year was a nine month curriculum crammed into six months on account of work experience beginning at the start of March.</li>
 </ul>
 
 I would have liked to compete properly in fourth year (this year), entering either my _Final Year Project_ (fyp) or our best _Real World Modelling_ project. The theme this year was tower defence and I thought I'd compete one last time. However, due to the stresses of final year and the fact that none of my team members showed up on the day, it turned into more of a feedback session than a proper competition entry (I was left to present both the _fyp_ and _RWM_ projects). It wasn't all bad though, I got some really useful feedback that really helped improve my _fyp_ and I had the chance to hear John Romero speak, which is, I suppose the useful part of this post behind the wall of waffle. If you've bothered reading this far, I congratulate you.<br>
