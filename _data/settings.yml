@@ -1,6 +1,7 @@
 basic_settings:
   site_title: Alexander Meuer
-  favicon_image: /assets/favicon.png
+  favicon_image_raster: /assets/favicon.png
+  favicon_image_vector: /assets/favicon.svg
 
 header_settings:
   logo_image:
